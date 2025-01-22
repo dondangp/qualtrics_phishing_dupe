@@ -1,0 +1,1237 @@
+<html xmlns:ng="http://angularjs.org" ng-app="loginService" ng-controller="LoginController as lc" lang="en-US"
+    class="ng-scope">
+
+<head>
+    <style>
+        @charset "UTF-8";
+
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak,
+        .ng-hide:not(.ng-hide-animate) {
+            display: none !important;
+        }
+
+        ng\:form {
+            display: block;
+        }
+
+        .ng-animate-shim {
+            visibility: hidden;
+        }
+
+        .ng-anchor {
+            position: absolute;
+        }
+    </style>
+    <link rel="shortcut icon" href="/login/static/favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Access the Experience Management Platform™">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="google-site-verification" content="SMeNWpTFCoqZewS8u264D7xneaWf70qdqx5gOA-uATs">
+    <title>Login | Qualtrics</title><!-- inject:css -->
+    <link rel="stylesheet" href="css/bundle.css">
+    <!-- endinject -->
+    <script type="text/javascript" async="" charset="utf-8"
+        src="https://www.gstatic.com/recaptcha/releases/1Bq_oiMBd4XPUhKDwr0YL1Js/recaptcha__en.js"
+        crossorigin="anonymous"
+        integrity="sha384-7Lqt4UJZXhMDrv53rQ2TLKrcD3cWEG+cuRUbGu72+VYcmMhsRgpa6MWCWUeRxB/x"></script>
+    <script type="text/javascript" async=""
+        integrity="sha384-t5vT47el2d0e6uQ1h75P9Lbzo8by6pbk+Rg41Gm4xuTGR+eDLpbWslKUtZMDe9Bj" crossorigin="anonymous"
+        src="https://cdn.amplitude.com/libs/amplitude-5.6.0-min.gz.js"></script>
+    <script>var onloadCallback = function () { jQuery('.g-recaptcha').each(function (index, el) { grecaptcha.render(el, { 'sitekey': '6LdFdyQTAAAAAM5BnlGoA6uwbNuuBjUmHaEzF007' }); }); }; if (/*@cc_on!@*/false) { document.documentElement.className += ' ie ie10'; } window.Qualtrics = {}; window.Qualtrics.brand = {}; window.Qualtrics.strings = { "LOGIN": { "ACCESS_CODE": "Access Code", "ACKNOWLEDGE": "Acknowledge", "ADDITIONAL_ATTRIBUTES": "Additional Attributes", "ADDITIONAL_ATTRIBUTES_REQUIRED": "Please enter the following information required by your administrator.", "ALL_FIELDS_REQUIRED": "All fields are required.", "ALREADY_ENROLLED_IN_MFA_OPTION": "You have already enrolled in this two-step verification method.", "ALREADY_PASSWORD_RESET": "Already set your password?", "ALT_SIGN_IN": "Choose another way to sign in", "APP": "App", "AUTHENTICATOR_APP_INFO": "It appears you haven't logged in with an authenticator app before. To do so, download an authenticator app to your smartphone.", "AUTHENTICATOR_SSO_CONFIG_DISABLED": "This SSO connection is disabled. Please contact your brand administrator.", "AUTHENTICATOR_SSO_CONFIG_NOT_FOUND": "Error while determining which SSO connection to use for this survey. Please contact you brand administrator.", "BACK": "Back", "BACKUP_CODE_INFO": "These codes can be used to access your account if you are offline or cannot access your primary two-step method.", "BACKUP_CODE_SAVE": "Please save these backup codes in a safe and accessible place.", "BACKUP_CODE_USED_ONCE": "Each code can only be used once. More codes can be regenerated through your account settings.", "BACK_SIGN_IN": "Sign in with a username and password", "BRAND_NOTIFICATION_EMAIL_BODY_1": "A new user was created through self enrollment.", "BRAND_NOTIFICATION_EMAIL_BODY_ATTRIBUTE_1": "User name: {{userName}}", "BRAND_NOTIFICATION_EMAIL_BODY_ATTRIBUTE_2": "User first name: {{userFirstName}}", "BRAND_NOTIFICATION_EMAIL_BODY_ATTRIBUTE_3": "User last name: {{userLastName}}", "BRAND_NOTIFICATION_EMAIL_BODY_ATTRIBUTE_4": "User email: {{userEmail}}", "BRAND_NOTIFICATION_EMAIL_BODY_ATTRIBUTE_5": "User organization: {{userBrand}}", "BRAND_NOTIFICATION_EMAIL_SUBJECT": "New Qualtrics User Created", "BROWSER_NOT_SUPPORT": "Your current browser does not support the necessary features to continue. In order to continue, please resume on a newer browser (Chrome, Firefox, IE11+).", "CERTIFICATION_ENROLLMENT_CLOSING": "Best of luck on your certification!", "CERTIFICATION_ENROLLMENT_CTA": "Get Started", "CERTIFICATION_ENROLLMENT_DIRECTIONS": "Follow the steps below to start your certification journey:", "CERTIFICATION_ENROLLMENT_EMAIL_SUBJECT": "Welcome to Qualtrics Certification", "CERTIFICATION_ENROLLMENT_PROMO_CODE_BODY": "{{promoCodes}}", "CERTIFICATION_ENROLLMENT_PROMO_CODE_HEADER": "You have been granted a free exam attempt for the following course(s) by using the promo code(s) below:", "CERTIFICATION_ENROLLMENT_SALUTATION": "Welcome to Qualtrics Certification!", "CERTIFICATION_ENROLLMENT_SIGNATURE": "The XM Basecamp Team", "CERTIFICATION_ENROLLMENT_STEP1_ALREADY_ENROLLED": "Log in to XM Basecamp with your Qualtrics credentials", "CERTIFICATION_ENROLLMENT_STEP1_NOT_ENROLLED": "Click \"Get Started\" below to create your Qualtrics credentials", "CERTIFICATION_ENROLLMENT_STEP2_ALREADY_ENROLLED": "Complete the learning journey for your certification course", "CERTIFICATION_ENROLLMENT_STEP2_NOT_ENROLLED": "You will be directed to log in to XM Basecamp with your Qualtrics credentials", "CERTIFICATION_ENROLLMENT_STEP3_ALREADY_ENROLLED": "Use the associated promo code when you are ready to take the exam (save this email so you don’t lose your promo code!)", "CERTIFICATION_ENROLLMENT_STEP3_NOT_ENROLLED": "Complete the learning journey for your certification course", "CERTIFICATION_ENROLLMENT_STEP4_NOT_ENROLLED": "Use the associated promo code when you are ready to take the exam (save this email so you don’t lose your promo code!)", "CHOOSE_IDENTITY_PROVIDER_HEADER": "Select how you would like to sign in", "CHOOSE_ORGANIZATION": "Click to choose an organization", "CLICK_HERE_REDIRECT": "Click here to redirect to login", "CLOSE_WINDOW": "Close window", "CONNECTION_TEST_ERROR": "Error while testing the SSO Connection. Click on the error code below to learn more", "CONTINUE": "Continue", "CONTINUE_ENROLLMENT": "Continue enrolling in methods", "COPIED": "Copied!", "COPIED_MESSAGE": "Qualtrics backup codes: ", "COPY": "Copy to clipboard", "COUPON_CODE_REQUIRED": "Access code is required.", "COUPON_EXPIRED": "The access code you provided has expired.", "COUPON_MAX_USER_COUNT_REACHED": "The access code you provided has reached the maximum users allowed.", "COUPON_NOT_ACTIVATED": "The access code you provided is not active.", "COUPON_NOT_FOUND": "The access code you provided is invalid.", "CREATING_NEW_USER": "Creating you a new user", "CUSTOM_DOMAIN": "custom-domain", "DEFAULT_AUTHENTICATOR_SSO_CONFIG_NOT_FOUND": "Error while determining which SSO connection to use for this survey. Please contact you brand administrator.", "DEFAULT_BAD_REQUEST": "Bad Request", "DEFAULT_INTERNAL_FAILURE": "Unexpected error occurred.", "DEFAULT_LOGIN_FAILURE": "We were unable to log you in.", "DEFAULT_ORGANIZATION_SSO_CONFIG_NOT_FOUND": "Error while determining which SSO connection to use. Please contact you brand administrator.", "DEFAULT_SSO_ERROR": "Failed to trigger SSO flow.", "DIVISION": "Division", "DO_NOT_HAVE_ACCOUNT": "Don't have an account?", "EMAIL": "Email", "EMAIL_GREETING": "Hello,", "EMAIL_MISSING": "Email address not found for this username.", "EMAIL_NOT_FOUND": "We were unable to find any user account associated with this email address", "EMAIL_NOT_RECEIVED": "Didn't receive the email? Check your spam folder.", "EMAIL_NOT_VERIFIED": "The email address associated with your Qualtrics account is not verified. Please check your email for a verification link.", "EMAIL_Q": "Qualtrics", "EMAIL_Q_SUPPORT": "Qualtrics Support", "EMAIL_THANKS": "Thanks,", "EMAIL_THANK_YOU": "Thank you.", "EMAIL_VERIFICATION_EMAIL_BODY_1": "We noticed that this email address which is associated with a Qualtrics account has not been verified yet. Please verify it by clicking the button below.", "EMAIL_VERIFICATION_EMAIL_GREETING": "Hello,", "EMAIL_VERIFICATION_EMAIL_Q": "Qualtrics", "EMAIL_VERIFICATION_EMAIL_SUBJECT": "Qualtrics Email Verification", "EMAIL_VERIFICATION_EMAIL_THANKS": "Thanks,", "EMAIL_VERIFICATION_FAILED_MESSAGE": "Email verification failed due to an internal error. Please try again later.", "EMAIL_VERIFICATION_HYPERLINK": "Click to verify email", "EMAIL_VERIFICATION_MAY_CLOSE_WINDOW": "You may now close this browser window and sign in to your Qualtrics account", "EMAIL_VERIFICATION_RESULT": "Email Verification Result", "EMAIL_VERIFICATION_SUCCESS_MESSAGE": "The email address associated with your Qualtrics account has been successfully verified.", "ENROLLMENT_ALREADY_EXISTS_COMMUNITY_EMAIL_BODY_2": "Since you already have a Qualtrics account registered to this email address, please sign in with your username and password. After signing in, click \"Communities\" in the top left-hand corner of your page and select \"XM Pros\".", "ENROLLMENT_ALREADY_EXISTS_DEV_PORTAL_TEAM_INVITATION_EMAIL_BODY_2": "Confirm this invitation by signing in with your existing username and password.", "ENROLLMENT_ALREADY_EXISTS_DEV_PORTAL_TEAM_INVITATION_EMAIL_HYPERLINK": "Sign In to Confirm Invitation", "ENROLLMENT_ALREADY_EXISTS_EMAIL_BODY_2": "Since you already have an account registered to this email address, please sign in with your existing username and password.", "ENROLLMENT_ALREADY_EXISTS_EMAIL_HYPERLINK": "Sign In", "ENROLLMENT_ALREADY_EXISTS_PARTNER_PORTAL_EMAIL_BODY_2": "Since you already have a Qualtrics account registered to this email address ({{userEmail}}), please sign in with your existing username ({{userName}}) and password. If you do not recall your password, please select ’Forgot Password’ on the sign in page.", "ENROLLMENT_ALREADY_EXISTS_PARTNER_PORTAL_TEAM_INVITATION_EMAIL_BODY_2": "Confirm this invitation by signing in with your existing username and password.", "ENROLLMENT_AUDIENCE_MANAGEMENT_EMAIL_BODY_1": "A request was submitted to register for a Panelist Account.", "ENROLLMENT_AUDIENCE_MANAGEMENT_EMAIL_SUBJECT": "Panelist Account Registration Request", "ENROLLMENT_COMMUNITY_EMAIL_BODY_1": "A request was submitted to register for an XM Pros member account.", "ENROLLMENT_COMMUNITY_EMAIL_SIGNATURE": "The XM Pros Community Team", "ENROLLMENT_COMMUNITY_EMAIL_SUBJECT": "XM Pros Registration Request", "ENROLLMENT_COMMUNITY_REGISTER_EMAIL_HYPERLINK": "Register for XM Pros", "ENROLLMENT_COMMUNITY_SIGN_IN_EMAIL_HYPERLINK": "Sign in to XM Pros", "ENROLLMENT_DEV_PORTAL_TEAM_INVITATION_EMAIL_BODY_1": "You have been invited to be part of the development team for XM Extension {{extensionName}}!", "ENROLLMENT_DEV_PORTAL_TEAM_INVITATION_EMAIL_SUBJECT": "Qualtrics Developer Invitation to collaborate on {{extensionName}}", "ENROLLMENT_EMAIL_BODY_1": "A request was submitted to register for a Qualtrics {{type}} Account.", "ENROLLMENT_EMAIL_GREETING": "Hello,", "ENROLLMENT_EMAIL_IGNORE": "PS: If you didn't make this request, please ignore this email.", "ENROLLMENT_EMAIL_PARTNER_PORTAL_SIGNATURE_1": "Thank you,", "ENROLLMENT_EMAIL_PARTNER_PORTAL_SIGNATURE_2": "Qualtrics Partner Operations", "ENROLLMENT_EMAIL_PARTNER_PORTAL_SIGNATURE_SUPPORT": "Need Support?", "ENROLLMENT_EMAIL_Q": "Qualtrics", "ENROLLMENT_EMAIL_SUBJECT": "Qualtrics {{type}} Registration Request", "ENROLLMENT_EMAIL_THANKS": "Thanks,", "ENROLLMENT_PARTNER_PORTAL_EMAIL_BODY_1": "You are invited to access the newly launched Qualtrics Partner Portal.", "ENROLLMENT_PARTNER_PORTAL_EMAIL_BODY_3": "For future logins, the Qualtrics Partner Portal can be accessed at:", "ENROLLMENT_PARTNER_PORTAL_EMAIL_GREETING": "Welcome {{userFirstName}}!", "ENROLLMENT_PARTNER_PORTAL_EMAIL_SUBJECT": "Qualtrics Partner Portal Registration", "ENROLLMENT_VERIFY_COMMUNITY_EMAIL_BODY_2": "Please create a free account to continue the registration process. Once the account is created, you can immediately sign in. After signing in, click \"Communities\" in the top left-hand corner of your page and select \"XM Pros\".", "ENROLLMENT_VERIFY_DEV_PORTAL_TEAM_INVITATION_EMAIL_BODY_2": "To confirm this invitation, please complete the registration process below:", "ENROLLMENT_VERIFY_DEV_PORTAL_TEAM_INVITATION_EMAIL_HYPERLINK": "Sign Up to Confirm Invitation", "ENROLLMENT_VERIFY_EMAIL_BODY_2": "Please verify your email address to complete the registration process.", "ENROLLMENT_VERIFY_EMAIL_HYPERLINK": "Verify My Email", "ENROLLMENT_VERIFY_PARTNER_PORTAL_EMAIL_BODY_2": "Please verify your email address {{userEmail}} to complete the initial Qualtrics sign-on registration process.", "ENROLL_IN_MFA": "Your account administrator has enabled two-factor authentication (2FA) for enhanced security. Please set up two-factor authentication before continuing.", "ENROLL_MORE_FACTORS": "Continue enrolling in methods?", "ENTER_ACCOUNT_ACCESS_CODE": "If you have been provided an access code, enter it now.", "ENTER_ACCOUNT_EMAIL_ADDRESS": "Enter your email address to create your account.", "ENTER_APP_TOKEN": "Enter the 6-digit code associated with this account from the authenticator app to continue logging in.", "ENTER_BACKUP_TOKEN": "Enter one of your 8-digit backup codes. Please mark it as used upon successful login.", "ENTER_EMAIL": "Enter your email address", "ENTER_ORGANIZATION_ID": "Enter your company's Organization ID", "ENTER_PHONE_NUMBER_HEADER": "Enter Phone Number", "ENTER_PHONE_NUMBER_INFO": "This phone number will only be used for account security purposes.", "ENTER_SECRETKEY_MANUALLY": "Or, enter this code into the app manually: ", "ENTER_SMS_TOKEN": "Enter the 6-digit code that was just sent to:", "ERROR_CODE": "Error Code: [{{ errorCode }}]", "ERROR_TAG": "A report is generated with error tag [{{ errorTag }}].", "EXHAUSTED_ENROLLMENT_METHODS": "You have enrolled in all available two-step verification methods. There are no more options to enroll in at this time.", "EXHAUSTED_ENROLLMENT_METHODS_HEADER": "No more methods to enroll in", "EXP_ISSUES": "We are experiencing issues, please try again later.", "FB_AUTH_EMAIL_ATTRIBUTE_NOT_SET": "Unable to obtain email address from Facebook. Please enable access to email address in the Qualtrics app permissions on Facebook and try again.", "FEDRAMP_USER": "I'm a FedRAMP user", "FINISH_ENROLL_IN_MFA": "Finish enrolling in two-step verification", "FIRST_NAME": "First Name", "FIRST_PARTY_APPLICATION_LOGIN_DISABLED": "{0} is not enabled for your organization. Please contact your brand administrator to enable it.", "FORGOT_PASSWORD": "Forgot your password?", "FORGOT_PASSWORD_ACCESSIBLE": "<strong>Forgot your password?</strong>", "FORGOT_PASSWORD_WITH_LINK": "<strong>Forgot your password?</strong> Reset", "GBAAS_GBA451": "Access has been denied.", "GBAAS_GBB451": "Your login has been denied due to attempted access from a country or region in which SAP does not provide products and services. Any attempt to circumvent this restriction may result in your account being permanently disabled. Per SAP policy and applicable law, using or accessing SAP products and services in or from these countries is strictly prohibited. For more information on SAP end use restrictions, please visit: https://www.sap.com/about/agreements/export-statements.html", "GBAAS_GBC451": "Your login has been denied due to attempted access from a country or region in which SAP does not provide products and services. Any attempt to circumvent this restriction may result in your account being permanently disabled. Per SAP policy and applicable law, using or accessing SAP products and services in or from these countries is strictly prohibited. For more information on SAP end use restrictions, please visit: https://www.sap.com/about/agreements/export-statements.html", "GROUP": "Group", "HAVENT_RECEIVED_CODE": "Haven't received your code yet?", "HERE": "here", "HI": "Hi {{firstName}},", "IE_DEPRECATION": "Microsoft retired Internet Explorer on June 15, 2022, and no longer supports it. To continue, please switch to a different browser.", "INCOMPLETE_CONTACT_ADMIN": "Please contact your account administrator.", "INCORRECT_CODE": "Incorrect or expired code. Please try again.", "INTERNAL_ERROR_WITH_CODE": "[{0}] Unable to process the request", "INVALID_EMAIL_DOMAIN": "The email address you provided is not from the allowed domain.", "INVALID_EMAIL_VERIFICATION_CODE": "The verification code is invalid or expired.", "INVALID_LINK": "This link has expired", "INVALID_LOGIN": "Incorrect username or password.", "INVALID_ORGANIZATION_ID": "The Organization ID you entered is invalid.", "INVALID_PASSCODE": "Invalid Passcode", "INVALID_PHONE_NUMBER": "The phone number entered is invalid. Please enter a valid phone number", "INVALID_REDIRECT_URL": "Redirect URL does not match any of the registered redirect URLs", "INVALID_RESET_CODE": "Reset link is expired, please start a new password reset request.", "INVALID_RESET_USERNAME": "The username you entered doesn't match this password reset request.", "IP_ADDRESS_RESTRICTION": "Not allowed to login from this IP address.", "LAST_NAME": "Last Name", "LEARN_MORE": "Learn more.", "LEARN_MORE_ABOUT_BROWSER_COMPATIBILITY": "Learn more about browser compatibility", "LINK_EXPIRED_HEADER": "Link Expired", "LINK_EXPIRE_24_HR": "The link will expire in 24 hours. Please use it as soon as possible.", "LOGIN": "Log in", "LOGIN_HERE": "Login here", "LOGIN_PROVIDER_DISABLED": "This username does not belong to a brand with Qualtrics logins enabled", "LOGIN_WEBHOOK_IS_UNAVAILABLE": "Unable to reach your organizations server. Please contact your system administrator.", "LOGIN_WITH_EMAIL_LINK_ON_SSO": "Forgot organization ID?", "LOGIN_WITH_QUALTRICS": "Qualtrics sign in page", "LOGIN_WITH_SSO": "My organization's single sign-on (SSO)", "MAGIC_LINK_EMAIL_BODY_1": "A request was submitted to sign into Qualtrics.", "MAGIC_LINK_EMAIL_BODY_1_MOBILE": "A request was submitted to sign into the Qualtrics XM Mobile app.", "MAGIC_LINK_EMAIL_BODY_2": "Use the link below. This request will expire in 5 minutes.", "MAGIC_LINK_EMAIL_BODY_2_MOBILE": "Use the link below from your mobile device only. This request will expire in 5 minutes.", "MAGIC_LINK_EMAIL_COPY_PASTE": "You may copy and paste this link to your browser.", "MAGIC_LINK_EMAIL_COPY_PASTE_MOBILE": "You may copy and paste this link to your mobile browser.", "MAGIC_LINK_EMAIL_IGNORE": "If you didn't request this link, you can safely ignore this email.", "MAGIC_LINK_SUBJECT": "Login to Qualtrics", "MALFORMED_REQUEST": "We were unable to process your request.", "MAX_LEN_REQUIRED": "At most {0} characters.", "MERGE_EXISTING_USER_OPTION": "Yes, I have a preexisting account here", "MERGE_EXISTING_USER_PROMPT": "It looks like this is your first time logging in here. Do you have a preexisting Qualtrics account for this brand?", "MERGE_EXISTING_USER_SUCCESS": "Your user was verified successfully", "MERGE_EXISTING_USER_TEXT": "Please enter the username and password for your preexisting Qualtrics account in this brand.", "MESSAGE_SECURITY_CHECK_FAILED": "We were unable to validate your request.", "MESSAGE_SECURITY_REQUIREMENT_UNMET": "Your request does not meet our security requirements.", "META": "Access the Experience Management Platform™", "MFA_CODE_DELIVERY_EMAIL_BODY_1": "Here is your login verification code:", "MFA_CODE_DELIVERY_EMAIL_BODY_2": "This code will expire in 5 minutes.", "MFA_CODE_DELIVERY_EMAIL_DISCLAIMER": "If you did not recently attempt to login, your account may be compromised. Please reset your password immediately.", "MFA_CODE_DELIVERY_EMAIL_SUBJECT": "Qualtrics Verification Code", "MFA_EMAIL_VERIFICATION_CODE": "Here is your login verification code:", "MFA_OPTIONS_HEADER": "Authentication method", "MFA_WARNING_PASSWORD_RESET": "If you did not recently attempt to login, then your account may be compromised. Please reset your password immediately", "MIN_LEN_REQUIRED": "At least {0} characters.", "MIN_LEN_REQUIRED_SINGLE": "At least 1 character.", "MIN_LOWERS_CHARS_REQUIRED": "At least {0} lower case characters.", "MIN_LOWERS_CHARS_REQUIRED_SINGLE": "At least 1 lower case character.", "MIN_NON_ALPHA_LEN_REQUIRED": "At least {0} special characters.", "MIN_NON_ALPHA_LEN_REQUIRED_SINGLE": "At least 1 special character.", "MIN_NUMERIC_CHARS_REQUIRED": "At least {0} numeric characters.", "MIN_NUMERIC_CHARS_REQUIRED_SINGLE": "At least 1 numeric character.", "MIN_UPPER_CHARS_REQUIRED": "At least {0} upper case characters.", "MIN_UPPER_CHARS_REQUIRED_SINGLE": "At least 1 upper case character.", "MOBILE_LINK_EXPIRED_BUTTON": "Open Qualtrics XM Mobile App", "MOBILE_LINK_EXPIRED_TEXT": "Return to the Qualtrics XM Mobile App to get a new link.", "MORE_MFA_ENROLLMENT": "You may continue enrolling in two-step verification methods or close this window to exit.", "MORE_OPTIONS": "More verification options", "MORE_THAN_ONE_ACCOUNT": "There's more than one account associated with this email. Choose one below:", "MULTIPLE_ORGANIZATIONS": "Have multiple organizations?", "NEED_CAPTCHA": "Please complete the captcha verification.", "NEED_EMAIL": "Please enter a valid email address.", "NEED_FIRST_NAME": "First name is required.", "NEED_HELP": "Need SSO help?", "NEED_LAST_NAME": "Last name is required.", "NEED_NEW_PASSWORD": "Please enter a new password.", "NEED_PASSWORD": "Please enter your password.", "NEED_USERNAME": "Please enter your username.", "NEED_USERNAME_OR_EMAIL": "Please enter your <strong>username</strong> or <strong>corporate email</strong>", "NEED_USERPASS": "Username and password are missing.", "NEED_VERIFICATION_CODE": "Please enter a verification code.", "NEW_ACCOUNT_FOR": "New account for:", "NEW_PASSWORD_CURRENTLY_USED": "The new password is same as the current one. Please use a different one.", "NEW_PASSWORD_TOO_COMMON": "This password is too common. Please use another one.", "NEW_USER": "<strong>New user?</strong> Set your password", "NEW_USER_ACCESSIBLE": "<strong>New user?</strong>", "NEW_USER_OPTION": "No, I don’t have a preexisting account here", "NEW_USER_SUCCESS": "Your user was created successfully", "NOTIFICATION": "Notification", "NOTIFICATION_CALL_TO_ACTION_EXPLORE_TOPICS": "Explore other topics", "NOTIFICATION_CALL_TO_ACTION_VIDEO": "Watch this video", "NOTIFICATION_DESCRIPTION": "Learn how to create a project from scratch in 3 minutes.", "NOTIFICATION_HEADLINE": "Getting Started?", "OFFLINE_CODES": "Offline Backup Codes", "ORGANIZATION_DISABLED": "Organization is disabled", "ORGANIZATION_ID": "Organization ID", "ORGANIZATION_LOGIN": "Sign in with SSO", "ORGANIZATION_LOGIN_EMAIL_SENT": "Please follow the link sent to your email address to finish logging in.", "ORGANIZATION_LOGIN_HEADER": "Please sign in with your organizational account", "ORGANIZATION_SSO_CONFIG_DISABLED": "This SSO connection is disabled. Please contact your brand administrator.", "PASSWORD_CHANGED_SUCCESS": "Your password was changed successfully", "PASSWORD_CONDITIONS": "Your password must be:", "PASSWORD_CONFIRM": "Please provide and confirm a new password", "PASSWORD_CONSTRAINTS_CHANGED": "Password constraints have been changed by the account administrator. Please reset your password.", "PASSWORD_EXPIRED": "Your password has expired. Please reset your password.", "PASSWORD_NOT_BEEN_COMMONLY_USED": "Not commonly used.", "PASSWORD_NOT_BEEN_CURRENTLY_USED": "Different from the current password.", "PASSWORD_NOT_MATCH": "Passwords must match", "PASSWORD_REQUIREMENTS_NOT_MET": "Password does not meet requirements.", "PASSWORD_RESET_AUDIENCE_MANAGEMENT_EMAIL_BODY_1": "A request was submitted to set your account password.", "PASSWORD_RESET_AUDIENCE_MANAGEMENT_EMAIL_SUBJECT": "Set Password", "PASSWORD_RESET_EMAIL_BODY_1": "A request was submitted to set your Qualtrics account password.", "PASSWORD_RESET_EMAIL_BODY_2": "This request will expire in 6 hours. Please set a new password as soon as possible.", "PASSWORD_RESET_EMAIL_GREETING": "Hi {{firstName}},", "PASSWORD_RESET_EMAIL_HYPERLINK": "Set password", "PASSWORD_RESET_EMAIL_LOCATION": "Location", "PASSWORD_RESET_EMAIL_MAY_COPY": "You may copy and paste this link to your browser.", "PASSWORD_RESET_EMAIL_NOTIFICATION": "You're receiving this email because you requested to reset your password.", "PASSWORD_RESET_EMAIL_Q": "Qualtrics", "PASSWORD_RESET_EMAIL_SUBJECT": "Set Qualtrics Password", "PASSWORD_RESET_EMAIL_SUPPORT": "If you didn't request this change, please {{left}}contact us{{right}}.", "PASSWORD_RESET_EMAIL_THANKS": "Thanks,", "PASSWORD_RESET_LINK": "Use this link to set a new password:", "PASSWORD_RESET_START": "Please start a new password reset request", "PASSWORD_TOO_COMMON": "This password is too common. Please change your password by clicking \"Forgot your password?\" below", "PERMISSION_BX_DASHBOARD": "You do not have permission to use BX Dashboards.", "PERMISSION_VOCALIZE": "You do not have permission to use CX Dashboards.", "PLEASE_WAIT": "Please wait ...", "POSTPONE_MFA": "Remind me in 30 days", "POWERED_BY_QUALTRICS": "Powered by Qualtrics", "PRINT": "Print codes", "RECOMMENDED_APPS": "Recommended apps:", "RELOCATION_LOCK": "We are currently undergoing maintenance. Please try again later.", "REMEMBER_ME": "Remember this device for 30 days", "RESEND_CODE": "Resend code", "RESET_LINK_EXPIRED": "Reset link is expired", "RESET_PASSWORD": "Reset password", "RESET_PASSWORD_HEADER": "Reset your password", "RESET_PASSWORD_HERE": "Reset your password here", "RESET_STYLE": "Reset Style", "RESTRICT_TO_BRAND": "The given username does not belong to this brand.", "RESTRICT_TO_DOMAIN": "The given username is not allowed to login from this url.", "RETRY_LOGIN": "Retry Login", "RETRY_REGENERATING_LINK": "Retry the action which generated this link to obtain a new one.", "RETURN_TO_LOGIN": "Return to login", "RE_ENTER_PASSWORD": "Re-enter new password", "SAVE_BEFORE_ENROLL": "Choose one of the above options to save the backup codes before continuing", "SCAN_QR_CODE_INSTRUCTIONS": "Scan the following QR code with the authenticator app.", "SELF_ENROLLMENT_COMPLETE": "Please complete the enrollment.", "SELF_ENROLLMENT_COMPLETE_SUCCESS": "Your account has been successfully created.", "SELF_ENROLLMENT_CONTACT_US": "If you didn't make this request, please {{left}}contact us{{right}}.", "SELF_ENROLLMENT_CREATE": "Create account", "SELF_ENROLLMENT_DISABLED": "Self Enrollment is disabled for this organization.", "SELF_ENROLLMENT_EMAIL_BODY_1": "Thanks for registering with Qualtrics!", "SELF_ENROLLMENT_EMAIL_BODY_2": "Please confirm your registration and verify your email address by clicking the button below.", "SELF_ENROLLMENT_EMAIL_BODY_3": "Alternatively, you may copy and paste the link below into your browser.", "SELF_ENROLLMENT_EMAIL_SUBJECT": "Please verify your new Qualtrics account", "SELF_ENROLLMENT_EMAIL_VERIFY_HYPERLINK": "Verify My Email", "SELF_ENROLLMENT_LINK_EXPIRED": "Account verification link has expired.", "SELF_ENROLLMENT_START": "Please start a new account creation request.", "SELF_ENROLLMENT_VERIFY": "Before you can login we need to verify your email address.", "SELF_ENROLLMENT_VERIFY_DONE": "An email has been sent to {{selfEnrollmentEmail}} with instructions on how to verify your address.", "SENDING_CODE": "Sending code ...", "SEND_APP": "Use an authenticator app", "SEND_CODE_TO": "A 6-digit verification code has been sent to the email address associated with your account: ", "SEND_EMAIL": "Send an email to: ", "SEND_RESET_EMAIL": "Send me an email", "SEND_SMS_TO": "Send an SMS to: ", "SENT_PASSWORD_RESET": "If the username is associated with an active account, you will receive instructions on next steps in your inbox.", "SENT_TO": "Email sent to", "SENT_TO_FOLLOW": "Follow the link to get back to your account.", "SESSION_EXPIRED": "Your current session has expired. Please sign in again.", "SET_PASSWORD": "Set your password", "SET_PASSWORD_HERE": "Set your password here", "SIGNING_YOU_IN": "Signing you in", "SIGN_IN": "Sign In", "SIGN_IN_GOOGLE": "Sign In with Google", "SIGN_ME": "Sign me up", "SSO_CONNECTION_TEST_HEADER": "SSO Test Connection Successful", "SSO_CONNECTION_USER_RESULT_HEADER": "User Result", "SSO_REQUEST_TIMEOUT": "This SSO login request timed out. Please try logging in again.", "SUBMIT": "Submit", "SUPPORT_HELP": "Can't log in or don't have an account?", "SUPPORT_LOGIN": "Failed to sign in?", "THANK_YOU": "Thank you.", "TITLE": "Login | Qualtrics", "TOO_MANY_ATTEMPTS": "Too many login attempts. Please wait 5 minutes.", "TOO_MANY_SESSIONS": "Login not allowed. The user has reached the maximum number of allowed sessions.", "TRY_AGAIN": "Send email again", "TWO_STEP": "Two-Factor Authentication", "UNABLE_TO_COMPLETE": "We are unable to complete your request.", "UNABLE_TO_SEND_CODE": "Unable to deliver verification code.", "USERNAME_LOCKED": "Too many failed login attempts. Your account has been locked. Please try again later.", "USERNAME_NOT_AVAILABLE": "This username is already in use.", "USERNAME_NOT_FOUND": "We were unable to process your username or the username doesn't exist in our system.", "USER_CREATION_LIMIT_EXCEEDED": "This organization has reached the maximum user accounts allowed. Please contact your administrator.", "USER_DISABLED": "User account is disabled", "USER_TYPE": "User Type", "USER_UNAUTHORIZED": "User not authorized.", "USE_BACKUP_CODE": "Use a backup code", "USE_SMS": "Send me a text", "VERIFIED_EMAIL": "Verified Email", "VERIFYING_ACCOUNT": "Verifying account", "VERIFYING_REQUEST": "Verifying request", "VERIFY_ACCOUNT": "Verify account", "WEB_LINK_EXPIRED_BUTTON": "Return to Login", "WEB_LINK_EXPIRED_TEXT": "Return to Qualtrics to get a new link.", "WELCOME": "Welcome to Qualtrics" }, "EMAIL_SENT": "Your email is being sent. It can take a few minutes before it is received.", "USERNAME": "Username", "PASSWORD": "Password", "CONDITIONS_OR": "or", "CONFIRM_PASSWORD": "Confirm Password", "SEND_EMAIL_FAILURE": "Failed to send email, please try again.", "SUBMIT": "Submit" }; window.Qualtrics.error = ""; window.Qualtrics.firstPartyAppName = ""; window.Qualtrics.marketingBanner = true; window.Qualtrics.useLoginServiceEnrollment = true; window.Qualtrics.clientAdditionalMetadata = null; window.Qualtrics.errorTag = "null"; window.Qualtrics.errorCode = ""; window.Qualtrics.errorDebuggingCode = ""; window.Qualtrics.hideRetry = false; window.Qualtrics.needLoginCaptcha = false; window.Qualtrics.locale = "en-US"; window.Qualtrics.language = ""; window.Qualtrics.user = {}; window.Qualtrics.user.username = ""; window.Qualtrics.user.password = ""; window.Qualtrics.organizationLoginId = ""; window.Qualtrics.loginHint = "${loginHint}"; if (window.Qualtrics.brand && window.Qualtrics.brand.isVanity) { document.title = window.Qualtrics.strings.LOGIN.SIGN_IN; } else { document.title = window.Qualtrics.strings.LOGIN.TITLE; }</script>
+    <!-- inject:js -->
+    <script src="/login/static/js/bundle.js?v=aa5791a71a5d796462cd33ca0cf397fcb2c8fcf8"></script>
+    <script src="/login/static/js/utils.js?v=aa5791a71a5d796462cd33ca0cf397fcb2c8fcf8"></script>
+    <!-- endinject --><!-- Polyfill pointer events -->
+    <script src="/login/static/js/pep.js"></script>
+    <style>
+        [touch-action="none"] {
+            -ms-touch-action: none;
+            touch-action: none;
+        }
+
+        [touch-action="auto"] {
+            -ms-touch-action: auto;
+            touch-action: auto;
+        }
+
+        [touch-action~="pan-x"] {
+            -ms-touch-action: pan-x;
+            touch-action: pan-x;
+        }
+
+        [touch-action~="pan-y"] {
+            -ms-touch-action: pan-y;
+            touch-action: pan-y;
+        }
+
+        [touch-action~="pan-up"] {
+            -ms-touch-action: pan-up;
+            touch-action: pan-up;
+        }
+
+        [touch-action~="pan-down"] {
+            -ms-touch-action: pan-down;
+            touch-action: pan-down;
+        }
+
+        [touch-action~="pan-left"] {
+            -ms-touch-action: pan-left;
+            touch-action: pan-left;
+        }
+
+        [touch-action~="pan-right"] {
+            -ms-touch-action: pan-right;
+            touch-action: pan-right;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css"
+        href="css/login.css">
+    <style type="text/css"></style>
+    <script charset="utf-8"
+        src="https://siteintercept.qualtrics.com/dxjsmodule/8.2798d9a63177f6635b5e.chunk.js?Q_CLIENTVERSION=2.23.1&amp;Q_CLIENTTYPE=web&amp;Q_BRANDID=login.qualtrics.com"></script>
+</head>
+<!--[if lte IE 7]><body class="ie ie8" ng-controller="LoginController as lc"><![endif]--><!--[if lte IE 9]><body class="ie ie9" ng-controller="LoginController as lc"><![endif]--><!--[if !IE]><!--><!--BEGIN QUALTRICS SITE INTERCEPT-->
+
+<body id="ng-app" ng-show="lc.visible">
+    <div id="ZN_cYDxfeM8jruPnSJ"><!--DO NOT REMOVE-CONTENTS PLACED HERE--></div>
+    <!--END SITE INTERCEPT--><!--<![endif]-->
+    <div class="incompatible_browser_notice_container error_with_margin ng-hide" ng-show="lc.unsupportedBrowser"
+        ng-class="{error_backing:lc.unsupportedBrowser}">
+        <div class="incompatible_browser_notice">
+            <div class="error_with_margin ng-binding">Your current browser does not support the necessary features to
+                continue. In order to continue, please resume on a newer browser (Chrome, Firefox, IE11+).</div>
+        </div>
+    </div>
+    <div class="pseudo_body">
+        <div ng-hide="lc.hideHeader == true" class="header_container"></div><!-- ngIf: lc.page == 'login' --><span
+            data-login="" ng-if="lc.page == 'login'" class="ng-scope">
+            <h1 ng-show="lc.config.state===lc.states.FORGOT_PASSWORD || lc.config.state===lc.states.PASSWORD_RESET_SENT"
+                class="sr-only ng-hide">Qualtrics Forgotten Password</h1>
+            <h1 ng-show="lc.config.state===lc.states.ORGANIZATION_LOGIN" class="sr-only ng-hide">Qualtrics Organization
+                Sign In</h1>
+            <h1 ng-show="lc.config.state===lc.states.IDENTITY_PROVIDER_SELECT" class="sr-only ng-hide">Qualtrics Sign In
+                Type Selection</h1>
+            <h1 ng-show="lc.config.state===lc.states.SELECT_ACCOUNT" class="sr-only ng-hide">Qualtrics Multiple
+                Organization Sign In</h1>
+            <h1 ng-hide="lc.config.state===lc.states.LOADING ||
+             lc.config.state===lc.states.FORGOT_PASSWORD ||
+             lc.config.state===lc.states.PASSWORD_RESET_SENT ||
+             lc.config.state===lc.states.SELECT_ACCOUNT ||
+             lc.config.state===lc.states.MFA ||
+             lc.config.state===lc.states.ENROLL_IN_MFA ||
+             lc.config.state===lc.states.ORGANIZATION_LOGIN ||
+             lc.config.state===lc.states.ORGANIZATION_LOGIN_EMAIL_SENT ||
+             lc.config.state===lc.states.LINK_EXPIRED ||
+             lc.config.state===lc.states.IDENTITY_PROVIDER_SELECT ||
+             lc.config.state===lc.states.IE_DEPRECATION ||
+             lc.error" class="sr-only">Qualtrics Sign In</h1><account-select
+                ng-show="lc.config.state===lc.states.SELECT_ACCOUNT" class="ng-scope ng-hide">
+                <link rel="stylesheet" type="text/css" href="css/base-styles.css">
+                <div class="as-body">
+                    <div class="as-header-div"><img src="img/qualtrics-logo.png"
+                            class="as-header-image" alt="Qualtrics XM Logo"></div>
+                    <div class="as-max-width">
+                        <div class="as-list" id="as-list">
+                            <h1 class="as-choose-text as-noselect ng-binding"></h1>
+                            <!-- ngRepeat: item in lc.accountList.items -->
+                            <div id="as-footer-account-select" class="as-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </account-select><identity-provider-select ng-show="lc.config.state===lc.states.IDENTITY_PROVIDER_SELECT"
+                class="ng-scope ng-hide">
+                <link rel="stylesheet" type="text/css" href="css/base-styles.css">
+                <div class="as-body">
+                    <div class="as-header-div">
+                        <logo logoid="idp-select-page" class="ng-scope">
+                            <div class="brand_logo_element all_centered_flex">
+                                <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                    id="qLogo-idp-select-page" class="qLogo ng-scope" ng-if="lc.brandLogo === false"
+                                    ng-keydown="lc.onLogoKeyPress($event)" ng-click="lc.onLogoClick()"></div>
+                                <!-- end ngIf: lc.brandLogo === false -->
+                            </div>
+                        </logo>
+                    </div>
+                    <div class="as-max-width">
+                        <div class="ips-list" id="ips-list">
+                            <!-- ngIf: lc.idpList.length > 1 --><!--            change this header text--><!-- ngRepeat: item in lc.idpList -->
+                            <div id="as-footer-idp-select" class="as-footer"></div>
+                        </div>
+                    </div>
+                </div>
+            </identity-provider-select><link-expired ng-show="lc.pageControls.showLinkExpired" class="ng-scope ng-hide">
+                <link rel="stylesheet" type="text/css" href="css/base-styles.css">
+                <div style="background-color:#F8F8F8;margin:0px;width:100%;height:100%">
+                    <div style="background-color:white;text-align:center;padding-bottom:20px;height:100px"><img
+                            src="img/qualtrics-logo.png" height="100%"
+                            style="padding-top: 30px"></div>
+                    <div style="width:100%">
+                        <div style="padding-top: 10px;padding-left:20px;padding-right:20px">
+                            <p style="font-family:72;line-height:32px;font-size:24px" class="ng-binding">Link Expired
+                            </p>
+                            <p ng-show="lc.mobile == 'true'" style="font-size:16px;color:#74777A;line-height:22px"
+                                class="ng-binding ng-hide">Return to the Qualtrics XM Mobile App to get a new link.</p>
+                            <p ng-hide="lc.mobile == 'true'" style="font-size:16px;color:#74777A;line-height:22px"
+                                class="ng-binding">Return to Qualtrics to get a new link.</p>
+                        </div>
+                        <div ng-show="lc.mobile == 'true'" style="position:absolute;bottom:10px;width:100%"
+                            class="ng-hide">
+                            <div style="text-align:center"><a href="xmapp://login/magiclinks"><button
+                                        ng-click="lc.mobileRedirectToBlank()"
+                                        style="border:none;background-color: #0A7ED1; color: white; font-size: 16px; border-radius: 4px; width: 335px; height: 40px; max-width: 90%"
+                                        class="ng-binding">Open Qualtrics XM Mobile App</button></a></div>
+                        </div>
+                    </div>
+                </div>
+            </link-expired>
+            <div class="login_container all_centered_flex" ng-class="{error_resize_form:(lc.showError.username||
+     lc.showError.password)}">
+                <div class="dynamic_vertical_container top_down_column_flex_center">
+                    <div class="fixed_width_container all_centered_flex">
+                        <form class="login_form ng-pristine ng-valid ng-hide" ng-submit="lc.redirectToLogin()"
+                            ng-show="lc.error">
+                            <logo logoid="login-page" ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement"
+                                class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-login-page" class="qLogo ng-scope" ng-if="lc.brandLogo === false"
+                                        ng-keydown="lc.onLogoKeyPress($event)" ng-click="lc.onLogoClick()"></div>
+                                    <!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                <div class="error_element all_centered_flex ng-hide" ng-show="lc.error">
+                                    <div class="error_backing all_centered_flex">
+                                        <div class="error_wrapper">
+                                            <div ng-show="lc.errorCode !== 'null' &amp;&amp; lc.errorCode !== ''"
+                                                class="error_with_margin ng-binding ng-hide">Error Code: []</div>
+                                            <div class="error_with_margin ng-binding"></div>
+                                            <div ng-show="lc.errorDebuggingCode !== 'null' &amp;&amp; lc.errorDebuggingCode !== ''"
+                                                class="error_with_margin ng-hide"><a href="/login/debug-codes"
+                                                    target="_blank" class="ng-binding"></a></div>
+                                            <div ng-show="lc.errorTag !== 'null' &amp;&amp; lc.errorTag !== ''"
+                                                class="error_with_margin ng-binding ng-hide">A report is generated with
+                                                error tag [null].</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-show="lc.loginSupportLink" class="all_centered_flex support_link ng-hide"><span
+                                    class="ng-binding">Failed to sign in?</span>&nbsp; <a class="ng-binding"></a></div>
+                            <div ng-show="!lc.hideRetry" class="all_centered_flex"><button
+                                    class="btn-success center-text-align"><span class="ng-binding">Retry
+                                        Login</span></button></div>
+                        </form>
+                        <form class="login_form ng-pristine ng-valid" autocomplete="off" ng-submit="lc.login()" ng-hide="lc.config.state===lc.states.LOADING||
+                  lc.config.state===lc.states.FORGOT_PASSWORD||
+                  lc.config.state===lc.states.PASSWORD_RESET_SENT||
+                  lc.config.state===lc.states.SELECT_ACCOUNT||
+                  lc.config.state===lc.states.MFA||
+                  lc.config.state===lc.states.ENROLL_IN_MFA||
+                  lc.config.state===lc.states.ORGANIZATION_LOGIN||
+                  lc.config.state===lc.states.ORGANIZATION_LOGIN_EMAIL_SENT||
+                  lc.config.state===lc.states.SELECT_ACCOUNT ||
+                  lc.config.state===lc.states.LINK_EXPIRED ||
+                  lc.config.state===lc.states.IDENTITY_PROVIDER_SELECT ||
+                  lc.config.state===lc.states.IE_DEPRECATION ||
+                  lc.error">
+                            <logo logoid="misc-page" ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement"
+                                class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-misc-page" class="qLogo ng-scope" ng-if="lc.brandLogo === false"
+                                        ng-keydown="lc.onLogoKeyPress($event)" ng-click="lc.onLogoClick()"></div>
+                                    <!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div class="psw_cons_msg ng-hide" ng-show="lc.showOrganizationHeader">
+                                <div class="ng-binding">Organization ID: <b class="ng-binding"></b></div>
+                            </div>
+                            <div class="psw_cons_msg ng-hide" ng-show="lc.isLdapEnabled">
+                                <h4 class="ng-binding">Please sign in with your organizational account</h4>
+                            </div>
+                            <div class="login_element all_centered_flex"><input type="text" placeholder="Username"
+                                    class="login_fields username ng-pristine ng-valid ng-isolate-scope ng-empty ng-touched"
+                                    id="UserName" autocomplete="username" autocorrect="off" autocapitalize="off"
+                                    spellcheck="false" focus-me="true" ng-class="{error_focus:lc.showError.username}"
+                                    ng-click="lc.clearError('username')" ng-model="lc.username"
+                                    ng-disabled="lc.config.state===lc.states.SIGN_IN" aria-label="Username"></div>
+                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                <div id="errorBannerPw" class="error_element all_centered_flex ng-hide"
+                                    ng-show="lc.showError.username&amp;&amp;!lc.showError.password">
+                                    <div class="error_backing all_centered_flex">
+                                        <div class="error_wrapper">
+                                            <div class="error_with_margin ng-binding"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login_element all_centered_flex"><input type="password" placeholder="Password"
+                                    class="login_fields password ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty"
+                                    id="UserPassword" autocomplete="current-password"
+                                    ng-class="{error_focus:lc.showError.password}" ng-click="lc.clearError('password')"
+                                    ng-model="lc.password" focus-me="" ng-disabled="lc.config.state===lc.states.SIGN_IN"
+                                    aria-label="Password"></div>
+                            <div class="recaptcha_element all_centered_flex ng-hide" ng-show="lc.needLoginCaptcha">
+                                <div class="g-recaptcha" id="loginrecaptcha" required="false">
+                                    <div style="width: 304px; height: 78px;">
+                                        <div><iframe title="reCAPTCHA" width="304" height="78" role="presentation"
+                                                name="a-pylv3m0qs24" frameborder="0" scrolling="no"
+                                                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                                                src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdFdyQTAAAAAM5BnlGoA6uwbNuuBjUmHaEzF007&amp;co=aHR0cHM6Ly9sb2dpbi5xdWFsdHJpY3MuY29tOjQ0Mw..&amp;hl=en&amp;v=1Bq_oiMBd4XPUhKDwr0YL1Js&amp;size=normal&amp;cb=yjcozruevkvh"></iframe>
+                                        </div><textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                            class="g-recaptcha-response"
+                                            style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                <div id="errorBannerAuth" class="error_element all_centered_flex ng-hide"
+                                    ng-show="lc.showError.password||lc.showError.username||lc.showError.unauthorized">
+                                    <div class="error_backing all_centered_flex">
+                                        <div class="error_wrapper">
+                                            <div ng-show="lc.errorCode !== 'null' &amp;&amp; lc.errorCode !== ''"
+                                                class="error_with_margin ng-binding ng-hide">Error Code: []</div>
+                                            <div class="error_with_margin ng-binding"></div>
+                                            <div ng-show="lc.errorTag !== 'null' &amp;&amp; lc.errorTag !== ''"
+                                                class="error_with_margin ng-binding ng-hide">A report is generated with
+                                                error tag [null].</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login_element all_centered_flex"
+                                ng-disabled="lc.config.state===lc.states.SIGN_IN"><button
+                                    class="btn-success center-text-align ng-binding" id="loginButton"
+                                    ng-show="lc.config.state!==lc.states.SIGN_IN">Sign In</button> <button
+                                    id="loadingButton" class="btn-success btn-with-ellipsis center-text-align ng-hide"
+                                    ng-show="lc.config.state===lc.states.SIGN_IN"><span class="ng-binding">Signing you
+                                        in</span>
+                                    <div class="ellipsis"></div>
+                                </button></div>
+                            <div ng-hide="lc.config.state===lc.states.LOADING||!lc.openIdEnabled" class="ng-hide">
+                                <div class="divider_element all_centered_flex">
+                                    <div class="divider_wrapper all_centered_flex">
+                                        <div class="before"></div>
+                                        <div class="divider ng-binding">or</div>
+                                        <div class="after"></div>
+                                    </div>
+                                </div>
+                                <div class="login_element all_centered_flex" ng-click="lc.oAuthLogin()">
+                                    <div class="google_oauth">
+                                        <div class="google_logo"></div>
+                                        <div class="google_sign_in ng-binding">Sign In with Google</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="link_element_set_password all_centered_flex" ng-show="lc.showResetLink">
+                                <div class="link">
+                                    <p class="margin_fixer ng-binding" ng-bind-html="lc.forgotPasswordText">
+                                        <strong>Forgot your password?</strong>&nbsp;</p><a class="align_link ng-binding"
+                                        id="forgotPasswordLink" href="#" ng-click="lc.forgotPassword()">Reset your
+                                        password here</a>
+                                </div>
+                            </div>
+                            <div class="link_element_set_password all_centered_flex ng-hide"
+                                ng-show="lc.showResetLinkNewUser">
+                                <div class="link">
+                                    <p class="margin_fixer ng-binding" ng-bind-html="lc.newUserText"><strong>New
+                                            user?</strong>&nbsp;</p><a class="align_link ng-binding" id="newUserLink"
+                                        href="#" ng-click="lc.forgotPassword()">Set your password here</a>
+                                </div>
+                            </div>
+                            <div class="link_element all_centered_flex ng-hide" ng-show="lc.showOrganizationLoginLink">
+                                <div class="link"><a id="organizationLoginLink" href="#"
+                                        ng-click="lc.showOrganizationLogin()" class="ng-binding">Sign in with SSO</a>
+                                </div>
+                            </div>
+                            <div class="link_element all_centered_flex ng-hide" ng-show="lc.allowSelfEnrollment">
+                                <div class="link"><a id="allowSelfEnrollmentLink" href="#"
+                                        ng-click="lc.redirectToEnrollment()" class="ng-binding">Don't have an
+                                        account?</a></div>
+                            </div>
+                            <div class="link_element all_centered_flex ng-hide"
+                                ng-show="(lc.isOauthRedirect &amp;&amp; lc.clientId === 'support') || (lc.isIdAuthRedirect &amp;&amp; lc.showSupportLink === 'true')">
+                                <div class="link"><a id="clientCustomLink"
+                                        href="https://support-portal.qualtrics.com/lite" class="ng-binding">Can't log in
+                                        or don't have an account?</a></div>
+                            </div>
+                        </form>
+                        <div class="loading_container ng-hide" ng-show="lc.config.state===lc.states.LOADING">
+                            <div class="spinner"></div>
+                            <div class="message_wrapper all_centered_flex">
+                                <div class="ng-binding">Signing you in ...</div>
+                            </div>
+                        </div>
+                        <div class="ie_deprecation ng-hide" ng-show="lc.config.state===lc.states.IE_DEPRECATION">
+                            <logo logoid="ie-deprecation-page"
+                                ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement" class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-ie-deprecation-page" class="qLogo ng-scope"
+                                        ng-if="lc.brandLogo === false" ng-keydown="lc.onLogoKeyPress($event)"
+                                        ng-click="lc.onLogoClick()"></div><!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div class="ie_deprecation_error_element all_centered_flex">
+                                <div class="ie_deprecation_error_backing all_centered_flex">
+                                    <div class="ie_deprecation_error_wrapper">
+                                        <div class="as-noselect as-error-icon-container"><svg width="24" height="24"
+                                                focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                                                data-icontype="Error">
+                                                <path fill="#bb0000"
+                                                    d="M12 7.5C12.4142 7.5 12.75 7.83579 12.75 8.25V12C12.75 12.4142 12.4142 12.75 12 12.75C11.5858 12.75 11.25 12.4142 11.25 12V8.25C11.25 7.83579 11.5858 7.5 12 7.5Z">
+                                                </path>
+                                                <path fill="#bb0000"
+                                                    d="M10.9922 15.3516C10.9922 14.795 11.4434 14.3438 12 14.3438C12.5566 14.3438 13.0078 14.795 13.0078 15.3516C13.0078 15.9082 12.5566 16.3594 12 16.3594C11.4434 16.3594 10.9922 15.9082 10.9922 15.3516Z">
+                                                </path>
+                                                <path fill="#bb0000" fill-rule="evenodd" clip-rule="evenodd"
+                                                    d="M12 3.51562C7.31421 3.51562 3.51562 7.31421 3.51562 12C3.51562 16.6858 7.31421 20.4844 12 20.4844C16.6858 20.4844 20.4844 16.6858 20.4844 12C20.4844 7.31421 16.6858 3.51562 12 3.51562ZM5.01562 12C5.01562 8.14264 8.14264 5.01562 12 5.01562C15.8574 5.01562 18.9844 8.14264 18.9844 12C18.9844 15.8574 15.8574 18.9844 12 18.9844C8.14264 18.9844 5.01562 15.8574 5.01562 12Z">
+                                                </path>
+                                            </svg></div>
+                                        <div class="ie_deprecation_error ng-binding">Microsoft retired Internet Explorer
+                                            on June 15, 2022, and no longer supports it. To continue, please switch to a
+                                            different browser.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ie_deprecation_btn_element all_centered_flex"><button
+                                    class="ie_deprecation_btn all_centered_flex ng-binding"
+                                    onclick="location.href='https://www.qualtrics.com/support/survey-platform/getting-started/browser-cookies/?utm_medium=product&amp;utm_source=in+product+message&amp;utm_campaign=internet+explorer+11+deprecation#LoginBrowserCompatibility'">Learn
+                                    more about browser compatibility</button></div>
+                        </div>
+                        <div class="organization_login ng-hide" id="loginSsoContainer"
+                            ng-show="lc.config.state===lc.states.ORGANIZATION_LOGIN">
+                            <logo logoid="org-login-page" ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement"
+                                class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-org-login-page" class="qLogo ng-scope" ng-if="lc.brandLogo === false"
+                                        ng-keydown="lc.onLogoKeyPress($event)" ng-click="lc.onLogoClick()"></div>
+                                    <!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div ng-show="lc.brandSupportsOrganizationLogin" class="ng-hide">
+                                <div class="fp_cmd_text_wrapper all_centered_flex">
+                                    <div class="fp_text ng-binding" id="enterOrganizationId">Enter your company's
+                                        Organization ID</div>
+                                </div>
+                                <div class="login_element all_centered_flex"><input type="text"
+                                        placeholder="Organization ID" id="loginOrganizationIdInput"
+                                        class="login_fields username ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty"
+                                        autocomplete="off" autocapitalize="off" focus-me="true"
+                                        ng-class="{error_focus:lc.showError.organizationLogin}"
+                                        ng-click="lc.clearError('organizationLogin')" ng-model="lc.organizationLoginId"
+                                        aria-labelledby="enterOrganizationId" aria-describedby="organizationLink"></div>
+                                <div class="fp_cmd_text_wrapper all_centered_flex">
+                                    <div class="fp_text ng-binding" id="organizationLink"
+                                        ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement">
+                                        https://organization-id.qualtrics.com</div>
+                                </div>
+                            </div>
+                            <div ng-hide="lc.brandSupportsOrganizationLogin">
+                                <div class="fp_cmd_text_wrapper all_centered_flex">
+                                    <div class="fp_text ng-binding">Enter your email address</div>
+                                </div>
+                                <div class="login_element all_centered_flex"><input type="text" placeholder="Email"
+                                        class="login_fields username ng-pristine ng-untouched ng-valid ng-isolate-scope ng-empty"
+                                        autocomplete="off" autocapitalize="off" focus-me="true"
+                                        ng-model="lc.organizationLoginUserEmail"></div>
+                            </div>
+                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                <div id="errorBannerOrganizationLogin" class="error_element all_centered_flex ng-hide"
+                                    ng-show="lc.showError.organizationLogin">
+                                    <div class="error_backing all_centered_flex">
+                                        <div class="error_wrapper">
+                                            <div class="error_with_margin ng-binding"></div>
+                                            <div ng-show="lc.errorTag !== 'null' &amp;&amp; lc.errorTag !== ''"
+                                                class="error_with_margin ng-binding ng-hide">A report is generated with
+                                                error tag [null].</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <btn id="loginSsoContinueBtn" to-call="lc.organizationLogin()" message="LOGIN.CONTINUE"
+                                class="ng-isolate-scope">
+                                <div class="login_element all_centered_flex"><button
+                                        class="center-text-align title-case btn-success ng-binding" ng-class="btnType"
+                                        ng-click="toCall()">Continue</button></div>
+                            </btn>
+                            <div class="link_element all_centered_flex ng-hide" ng-show="lc.showNeedHelpLink">
+                                <div class="link"><a
+                                        href="https://www.qualtrics.com/support/survey-platform/managing-your-account/organization-id-login/"
+                                        target="_blank" class="ng-binding">Need SSO help?</a></div>
+                            </div>
+                            <div class="magic-link-btn-container link_element all_centered_flex ng-hide"
+                                ng-show="lc.isXmappMagicLinkEnabled"><a id="loginForgotOrgIdLinkBtn"
+                                    href="xmapp://login/magicLinkStart" class="btn-link ng-binding">Forgot organization
+                                    ID?</a></div>
+                            <div class="link_element all_centered_flex" ng-hide="lc.ssologin">
+                                <div class="link"><a href="#" ng-click="lc.returnToLogin()" class="ng-binding">Sign in
+                                        with a username and password</a></div>
+                            </div>
+                        </div>
+                        <div class="organization_login_sent_email ng-hide"
+                            ng-show="lc.config.state===lc.states.ORGANIZATION_LOGIN_EMAIL_SENT">
+                            <logo logoid="org-login-email-sent-page"
+                                ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement" class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-org-login-email-sent-page" class="qLogo ng-scope"
+                                        ng-if="lc.brandLogo === false" ng-keydown="lc.onLogoKeyPress($event)"
+                                        ng-click="lc.onLogoClick()"></div><!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div class="top_down_column_flex_center">
+                                <div class="para_wrapper organization_login_email_sent">
+                                    <p class="centerAlign margin_fixer ng-binding">Please follow the link sent to your
+                                        email address to finish logging in.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="forgot_password_container ng-pristine ng-valid ng-hide"
+                            ng-submit="lc.sendPasswordResetEmail()"
+                            ng-show="lc.config.state===lc.states.FORGOT_PASSWORD">
+                            <logo logoid="forgot-passwd-page"
+                                ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement" class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-forgot-passwd-page" class="qLogo ng-scope"
+                                        ng-if="lc.brandLogo === false" ng-keydown="lc.onLogoKeyPress($event)"
+                                        ng-click="lc.onLogoClick()"></div><!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div class="header_text_wrapper all_centered_flex">
+                                <div class="fp_text">
+                                    <h2 class="ng-binding">Set your password</h2>
+                                </div>
+                            </div><!-- ngIf: lc.showPasswordConstraintsChangedInformation -->
+                            <div class="fp_cmd_text_wrapper all_centered_flex">
+                                <div class="fp_text ng-binding" id="needUsername" ng-bind-html="lc.needUsernameText">
+                                    Please enter your username.</div>
+                            </div>
+                            <div class="login_element all_centered_flex"><input type="text" placeholder="Username"
+                                    class="login_fields username ng-pristine ng-untouched ng-valid ng-empty"
+                                    ng-class="{error_focus:lc.showError.username}"
+                                    ng-click="lc.clearPasswordForgotError('username')" autocomplete="username"
+                                    ng-model="lc.username" aria-labelledby="needUsername"
+                                    aria-describedby="errorBannerForgotUsername"></div>
+                            <div class="recaptcha_element all_centered_flex ng-hide"
+                                ng-show="lc.needPasswordResetCaptcha">
+                                <div class="g-recaptcha" id="passwordresetrecaptcha" required="false">
+                                    <div style="width: 304px; height: 78px;">
+                                        <div><iframe title="reCAPTCHA" width="304" height="78" role="presentation"
+                                                name="a-wkpqw5avhfe" frameborder="0" scrolling="no"
+                                                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                                                src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LdFdyQTAAAAAM5BnlGoA6uwbNuuBjUmHaEzF007&amp;co=aHR0cHM6Ly9sb2dpbi5xdWFsdHJpY3MuY29tOjQ0Mw..&amp;hl=en&amp;v=1Bq_oiMBd4XPUhKDwr0YL1Js&amp;size=normal&amp;cb=v50s9wbofosg"></iframe>
+                                        </div><textarea id="g-recaptcha-response-1" name="g-recaptcha-response"
+                                            class="g-recaptcha-response"
+                                            style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea>
+                                    </div><iframe style="display: none;"></iframe>
+                                </div>
+                            </div>
+                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                <div id="errorBannerForgotPassword" class="error_element all_centered_flex ng-hide"
+                                    ng-show="lc.showError.forgotPassword">
+                                    <div class="error_backing all_centered_flex">
+                                        <div class="error_wrapper">
+                                            <div class="error_with_margin ng-binding"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="errorBannerForgotUsername" class="error_element all_centered_flex ng-hide"
+                                    ng-show="lc.showError.username">
+                                    <div class="error_backing all_centered_flex">
+                                        <div class="error_wrapper">
+                                            <div class="error_with_margin ng-binding"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login_element all_centered_flex"><button id="sendEmailButton"
+                                    class="btn-success all_centered_flex ng-binding">Send me an email</button></div>
+                            <div class="login_element all_centered_flex">
+                                <div class="link"><a href="#" ng-click="lc.returnToLogin()" class="ng-binding">Sign in
+                                        with a username and password</a></div>
+                            </div>
+                        </form>
+                        <div class="sent_email_container ng-hide"
+                            ng-show="lc.config.state===lc.states.PASSWORD_RESET_SENT">
+                            <logo logoid="passwd-reset-page"
+                                ng-hide="lc.loginHint===lc.loginHintTypes.audienceManagement" class="ng-scope">
+                                <div class="brand_logo_element all_centered_flex">
+                                    <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                    <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                        id="qLogo-passwd-reset-page" class="qLogo ng-scope"
+                                        ng-if="lc.brandLogo === false" ng-keydown="lc.onLogoKeyPress($event)"
+                                        ng-click="lc.onLogoClick()"></div><!-- end ngIf: lc.brandLogo === false -->
+                                </div>
+                            </logo>
+                            <div class="se_message_sent_wrapper top_down_column_flex_center">
+                                <div class="para_wrapper">
+                                    <h3 class="ng-binding">If the username is associated with an active account, you
+                                        will receive instructions on next steps in your inbox.</h3>
+                                </div>
+                            </div>
+                            <div class="se_try_again_text_wrapper top_down_column_flex_center">
+                                <div class="para_wrapper">
+                                    <p class="margin_fixer ng-binding">Follow the link to get back to your account.</p>
+                                </div>
+                            </div>
+                            <div class="se_try_again_text_wrapper top_down_column_flex_center">
+                                <div class="para_wrapper">
+                                    <p class="margin_fixer ng-binding">Didn't receive the email? Check your spam folder.
+                                        <a id="resendEmailLink" href="" ng-click="lc.forgotPassword()"
+                                            class="ng-binding">Send email again</a></p>
+                                </div>
+                            </div>
+                            <div class="se_already_text_wrapper all_centered_flex">
+                                <div class="para_wrapper">
+                                    <p class="margin_fixer ng-binding">Already set your password? <a
+                                            id="returnToLoginLink" href="" ng-click="lc.returnToLogin()"
+                                            class="ng-binding">Sign In</a></p>
+                                </div>
+                            </div>
+                        </div><authenticator-app-info ng-show="lc.pageControls.showAuthenticatorAppInfo"
+                            class="ng-scope ng-hide">
+                            <div class="login_form">
+                                <logo logoid="auth-app-info-page" class="ng-scope">
+                                    <div class="brand_logo_element all_centered_flex">
+                                        <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                        <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                            id="qLogo-auth-app-info-page" class="qLogo ng-scope"
+                                            ng-if="lc.brandLogo === false" ng-keydown="lc.onLogoKeyPress($event)"
+                                            ng-click="lc.onLogoClick()"></div><!-- end ngIf: lc.brandLogo === false -->
+                                    </div>
+                                </logo><two-step-header class="ng-scope"><bold-header message="LOGIN.TWO_STEP"
+                                        class="ng-isolate-scope">
+                                        <div class="header_text_wrapper all_centered_flex">
+                                            <div class="mfa_text">
+                                                <h2 class="ng-binding">Two-Factor Authentication</h2>
+                                            </div>
+                                        </div>
+                                    </bold-header></two-step-header><login-text message="LOGIN.AUTHENTICATOR_APP_INFO"
+                                    class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding"> It appears you haven't logged in with an
+                                            authenticator app before. To do so, download an authenticator app to your
+                                            smartphone. </div>
+                                    </div>
+                                </login-text><a
+                                    href="https://en.wikipedia.org/wiki/Multi-factor_authentication"><login-text
+                                        message="LOGIN.LEARN_MORE" class="ng-isolate-scope">
+                                        <div class="all_centered_flex">
+                                            <div class="mfa_text ng-binding"> Learn more. </div>
+                                        </div>
+                                    </login-text></a><br><login-text message="LOGIN.RECOMMENDED_APPS"
+                                    class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding"> Recommended apps: </div>
+                                    </div>
+                                </login-text><authenticator-app-option app-name="gauth" class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding">Google Authenticator - <a
+                                                href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;hl=en">Android</a>
+                                            | <a
+                                                href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8">iPhone</a>
+                                        </div>
+                                    </div>
+                                </authenticator-app-option><authenticator-app-option app-name="duo"
+                                    class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding">Duo Mobile - <a
+                                                href="https://play.google.com/store/apps/details?id=com.duosecurity.duomobile&amp;hl=en">Android</a>
+                                            | <a
+                                                href="https://itunes.apple.com/us/app/duo-mobile/id422663827?mt=8">iPhone</a>
+                                        </div>
+                                    </div>
+                                </authenticator-app-option><authenticator-app-option app-name="authy"
+                                    class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding">Authy - <a
+                                                href="https://play.google.com/store/apps/details?id=com.authy.authy&amp;hl=en">Android</a>
+                                            | <a
+                                                href="https://itunes.apple.com/us/app/authy/id494168017?mt=8">iPhone</a>
+                                        </div>
+                                    </div>
+                                </authenticator-app-option><br>
+                                <btn message="LOGIN.CONTINUE" to-call="lc.transitionToQRCode()"
+                                    class="ng-isolate-scope">
+                                    <div class="login_element all_centered_flex"><button
+                                            class="center-text-align title-case btn-success ng-binding"
+                                            ng-class="btnType" ng-click="toCall()">Continue</button></div>
+                                </btn><more-verification-options-button class="ng-scope">
+                                    <div class="link"><a href="#" ng-click="lc.transitionToMoreOptions()"><login-text
+                                                message="LOGIN.MORE_OPTIONS" class="ng-isolate-scope">
+                                                <div class="all_centered_flex">
+                                                    <div class="mfa_text ng-binding"> More verification options </div>
+                                                </div>
+                                            </login-text></a></div>
+                                </more-verification-options-button>
+                            </div>
+                        </authenticator-app-info><scan-qr-code ng-show="lc.pageControls.showQRCode"
+                            class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <div class="login_form"><two-step-header class="ng-scope"><bold-header
+                                                message="LOGIN.TWO_STEP" class="ng-isolate-scope">
+                                                <div class="header_text_wrapper all_centered_flex">
+                                                    <div class="mfa_text">
+                                                        <h2 class="ng-binding">Two-Factor Authentication</h2>
+                                                    </div>
+                                                </div>
+                                            </bold-header></two-step-header><login-text
+                                            message="LOGIN.SCAN_QR_CODE_INSTRUCTIONS" class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> Scan the following QR code with the
+                                                    authenticator app. </div>
+                                            </div>
+                                        </login-text><br>
+                                        <div>
+                                            <qrcode version="8" class="all_centered_flex" data="" size="150"><canvas
+                                                    class="qrcode" height="150" width="150"></canvas></qrcode>
+                                        </div><br><login-text message="LOGIN.ENTER_SECRETKEY_MANUALLY"
+                                            class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> Or, enter this code into the app
+                                                    manually: </div>
+                                            </div>
+                                        </login-text>
+                                        <div><login-text message="" class="ng-isolate-scope">
+                                                <div class="all_centered_flex">
+                                                    <div class="mfa_text ng-binding"> </div>
+                                                </div>
+                                            </login-text></div>
+                                        <btn message="LOGIN.CONTINUE" to-call="lc.transitionToInputToken()"
+                                            class="ng-isolate-scope">
+                                            <div class="login_element all_centered_flex"><button
+                                                    class="center-text-align title-case btn-success ng-binding"
+                                                    ng-class="btnType" ng-click="toCall()">Continue</button></div>
+                                        </btn><more-verification-options-button class="ng-scope">
+                                            <div class="link"><a href="#"
+                                                    ng-click="lc.transitionToMoreOptions()"><login-text
+                                                        message="LOGIN.MORE_OPTIONS" class="ng-isolate-scope">
+                                                        <div class="all_centered_flex">
+                                                            <div class="mfa_text ng-binding"> More verification options
+                                                            </div>
+                                                        </div>
+                                                    </login-text></a></div>
+                                        </more-verification-options-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </scan-qr-code><input-token ng-show="lc.pageControls.showInputToken" class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <form class="login_form ng-pristine ng-valid" ng-submit="lc.verifyMFACode()">
+                                        <logo logoid="input-token-page" class="ng-scope">
+                                            <div class="brand_logo_element all_centered_flex">
+                                                <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                                <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                                    id="qLogo-input-token-page" class="qLogo ng-scope"
+                                                    ng-if="lc.brandLogo === false"
+                                                    ng-keydown="lc.onLogoKeyPress($event)" ng-click="lc.onLogoClick()">
+                                                </div><!-- end ngIf: lc.brandLogo === false -->
+                                            </div>
+                                        </logo>
+                                        <div class="resend_message_element all_centered_flex ng-hide"
+                                            ng-show="lc.showResendCodeMessage">
+                                            <div class="resend_message_backing all_centered_flex">
+                                                <div class="resend_message_wrapper">
+                                                    <h5 class="resend_message ng-binding">Haven't received your code
+                                                        yet? <a id="resendMfaCodeLink" href="#"
+                                                            ng-click="lc.resendMFACode(lc.mfaInfo.type)"
+                                                            class="ng-binding">Resend code</a></h5>
+                                                </div>
+                                            </div>
+                                        </div><two-step-header class="ng-scope"><bold-header message="LOGIN.TWO_STEP"
+                                                class="ng-isolate-scope">
+                                                <div class="header_text_wrapper all_centered_flex">
+                                                    <div class="mfa_text">
+                                                        <h2 class="ng-binding">Two-Factor Authentication</h2>
+                                                    </div>
+                                                </div>
+                                            </bold-header></two-step-header>
+                                        <div class="loading_container ng-hide"
+                                            ng-show="lc.mfaCodeResolved.state!==lc.states.OK">
+                                            <div class="spinner"></div>
+                                            <div class="message_wrapper all_centered_flex">
+                                                <div class="ng-binding">Sending code ...</div>
+                                            </div>
+                                        </div>
+                                        <div class="se_result_wrapper all_centered_flex ng-hide"
+                                            ng-show="lc.mfaCodeResolved.state!==lc.states.OK &amp;&amp; lc.mfaInfo.inEmailMFA()">
+                                            <div class="icon_text_wrapper">
+                                                <div class="email_icon email_failure"></div>
+                                                <div class="mfa_text ng-binding">Unable to deliver verification code.
+                                                </div>
+                                            </div>
+                                        </div><login-text ng-show="lc.mfaCodeResolved.state===lc.states.OK" message=""
+                                            class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> </div>
+                                            </div>
+                                        </login-text><br>
+                                        <div class="login_element all_centered_flex"
+                                            ng-show="lc.mfaCodeResolved.state===lc.states.OK"><input type="text"
+                                                placeholder="Access Code"
+                                                class="login_fields mfa_code ng-pristine ng-untouched ng-valid ng-empty"
+                                                ng-class="{error_focus:lc.showError.mfaCode}"
+                                                ng-click="lc.clearError('mfaCode')" ng-model="lc.mfaCode"></div>
+                                        <error-banner error-message="lc.message" ng-show="lc.showError.mfaCode"
+                                            errorbannerid="showInputToken" class="ng-isolate-scope ng-hide">
+                                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                                <div id="errorBanner-showInputToken"
+                                                    class="error_element all_centered_flex">
+                                                    <div class="error_backing all_centered_flex">
+                                                        <div class="error_wrapper">
+                                                            <div class="error_with_margin ng-binding"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </error-banner>
+                                        <div ng-show="lc.mfaCodeResolved.state===lc.states.OK">
+                                            <btn btntype="btn-danger" message="LOGIN.LOGIN" to-call=""
+                                                class="ng-isolate-scope">
+                                                <div class="login_element all_centered_flex"><button
+                                                        class="center-text-align title-case btn-success ng-binding"
+                                                        ng-class="btnType" ng-click="toCall()">Log in</button></div>
+                                            </btn>
+                                        </div>
+                                        <div class="remember_device_wrapper all_centered_flex"
+                                            ng-show="lc.mfaCodeResolved.state===lc.states.OK">
+                                            <div class="remember_device"><label class="qcheckbox"><input
+                                                        qstrap.checkbox="" id="mfaRememberDevice" type="checkbox"
+                                                        ng-model="lc.mfaRememberDevice"
+                                                        class="ng-pristine ng-untouched ng-valid ng-empty"><i><i><i></i></i></i></label>
+                                                &nbsp;<label for="mfaRememberDevice" class="ng-binding">Remember this
+                                                    device for 30 days</label></div>
+                                        </div><more-verification-options-button class="ng-scope">
+                                            <div class="link"><a href="#"
+                                                    ng-click="lc.transitionToMoreOptions()"><login-text
+                                                        message="LOGIN.MORE_OPTIONS" class="ng-isolate-scope">
+                                                        <div class="all_centered_flex">
+                                                            <div class="mfa_text ng-binding"> More verification options
+                                                            </div>
+                                                        </div>
+                                                    </login-text></a></div>
+                                        </more-verification-options-button>
+                                    </form>
+                                </div>
+                            </div>
+                        </input-token><mfa-login-options ng-show="lc.pageControls.showLoginOptions"
+                            class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <div class="login_form">
+                                        <logo logoid="mfa-login-options-page" class="ng-scope">
+                                            <div class="brand_logo_element all_centered_flex">
+                                                <!-- ngIf: lc.brandLogo --><!-- ngIf: lc.brandLogo === false -->
+                                                <div role="link" aria-label="Qualtrics XM - Homepage" tabindex="0"
+                                                    id="qLogo-mfa-login-options-page" class="qLogo ng-scope"
+                                                    ng-if="lc.brandLogo === false"
+                                                    ng-keydown="lc.onLogoKeyPress($event)" ng-click="lc.onLogoClick()">
+                                                </div><!-- end ngIf: lc.brandLogo === false -->
+                                            </div>
+                                        </logo><two-step-header class="ng-scope"><bold-header message="LOGIN.TWO_STEP"
+                                                class="ng-isolate-scope">
+                                                <div class="header_text_wrapper all_centered_flex">
+                                                    <div class="mfa_text">
+                                                        <h2 class="ng-binding">Two-Factor Authentication</h2>
+                                                    </div>
+                                                </div>
+                                            </bold-header></two-step-header><login-text message="LOGIN.ALT_SIGN_IN"
+                                            class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> Choose another way to sign in </div>
+                                            </div>
+                                        </login-text>
+                                        <div class="login_element all_centered_flex"
+                                            ng-hide="lc.mfaInfo.isNewMFAUiEnabled"><select ng-model="lc.mfaInfo.type"
+                                                class="mfa_text btn btn-select select-styling ng-pristine ng-untouched ng-valid ng-empty">
+                                                <option value="? object:null ?" selected="selected"></option>
+                                                <!-- ngRepeat: mfaOption in lc.mfaInfo.mfaOptions -->
+                                            </select></div>
+                                        <div class="new-mfa-options ng-hide" ng-show="lc.mfaInfo.isNewMFAUiEnabled">
+                                            <div style="margin-top: 8px" class="all_centered_flex">
+                                                <div id="mfa-options-label" class="mfa_text ng-binding">Authentication
+                                                    method</div>
+                                            </div>
+                                            <ul style="margin-top: 8px" class="checkbox-list form-group"
+                                                role="radiogroup" aria-labelledby="mfa-options-label">
+                                                <!-- ngRepeat: mfaOption in lc.mfaInfo.mfaOptions -->
+                                                <li ng-show="lc.mfaEnrollmentFlow &amp;&amp; lc.mfaInfo.isNewMFAUiEnabled"
+                                                    class="ng-hide"><label><input type="radio"
+                                                            class="custom-radio ng-pristine ng-untouched ng-valid ng-empty"
+                                                            ng-value="lc.mfaPostponeUserOption"
+                                                            ng-model="lc.mfaInfo.type" name="mfaOptions"
+                                                            aria-labelledby="mfaOption-postpone" value="postponeOption">
+                                                        <span id="mfaOption-postpone"
+                                                            class="custom-span ng-binding">Remind me in 30
+                                                            days</span></label></li>
+                                            </ul>
+                                        </div>
+                                        <div class="brand_logo_container">
+                                            <btn message="LOGIN.CONTINUE"
+                                                to-call="lc.mfaInfo.type === lc.mfaPostponeUserOption ? lc.postponeMFA() : lc.transitionToOption(lc.mfaInfo.type)"
+                                                class="ng-isolate-scope">
+                                                <div class="login_element all_centered_flex"><button
+                                                        class="center-text-align title-case btn-success ng-binding"
+                                                        ng-class="btnType" ng-click="toCall()">Continue</button></div>
+                                            </btn>
+                                        </div><back-to-login-button ng-hide="lc.mfaInfo.enrollExtraFactors"
+                                            class="ng-scope"><a href="#" ng-click="lc.returnToLogin()"><login-text
+                                                    message="LOGIN.RETURN_TO_LOGIN" class="ng-isolate-scope">
+                                                    <div class="all_centered_flex">
+                                                        <div class="mfa_text ng-binding"> Return to login </div>
+                                                    </div>
+                                                </login-text></a></back-to-login-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </mfa-login-options><mfa-backup-codes ng-show="lc.pageControls.showBackupCodes"
+                            class="ng-scope ng-hide">
+                            <div class="login_form"><bold-header message="LOGIN.OFFLINE_CODES" class="ng-isolate-scope">
+                                    <div class="header_text_wrapper all_centered_flex">
+                                        <div class="mfa_text">
+                                            <h2 class="ng-binding">Offline Backup Codes</h2>
+                                        </div>
+                                    </div>
+                                </bold-header><login-text message="LOGIN.BACKUP_CODE_INFO" class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding"> These codes can be used to access your account
+                                            if you are offline or cannot access your primary two-step method. </div>
+                                    </div>
+                                </login-text><br><login-text message="LOGIN.BACKUP_CODE_SAVE" class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding"> Please save these backup codes in a safe and
+                                            accessible place. </div>
+                                    </div>
+                                </login-text><br><!-- ngRepeat: backupCode in lc.mfaInfo.backupCodes --><br><login-text
+                                    message="LOGIN.BACKUP_CODE_USED_ONCE" class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding"> Each code can only be used once. More codes
+                                            can be regenerated through your account settings. </div>
+                                    </div>
+                                </login-text><br>
+                                <div class="all_centered_flex">
+                                    <div class="btn btn-info save_backup_code_btn ng-binding"
+                                        ng-click="lc.printBackupCodes()">Print codes</div>
+                                    <div class="middle_padding"></div>
+                                    <div ngclipboard="" data-clipboard-text=""
+                                        class="btn btn-info save_backup_code_btn cust_tooltip ng-binding ng-isolate-scope"
+                                        ng-class="{cust_tooltip_on: lc.userCopiedBackupCodes}"
+                                        ng-click="lc.copiedBackupCodes()">Copy to clipboard <span
+                                            class="tooltiptext ng-binding">Copied!</span></div>
+                                </div><br>
+                                <div class="login_element all_centered_flex cust_hover_tooltip"
+                                    ng-class="{cust_hover_tooltip: !lc.mfaInfo.backupCodesSaved}">
+                                    <div class="btn btn-success center-text-align cust_tooltip ng-binding disabled"
+                                        ng-class="{disabled: !lc.mfaInfo.backupCodesSaved}"
+                                        ng-click="lc.saveBackupCodes()">Finish enrolling in two-step verification <span
+                                            class="tooltiptext ng-binding">Choose one of the above options to save the
+                                            backup codes before continuing</span></div>
+                                </div>
+                                <div class="se_result_wrapper all_centered_flex ng-hide" ng-show="lc.showError.mfaCode">
+                                    <div class="icon_text_wrapper error_wrapper error_backing">
+                                        <div class="error_with_margin ng-binding">We are experiencing issues, please try
+                                            again later.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mfa-backup-codes><mfa-link-expired ng-show="lc.pageControls.showInvalidLink"
+                            class="ng-scope ng-hide">
+                            <div class="login_form"><bold-header message="LOGIN.INVALID_LINK" class="ng-isolate-scope">
+                                    <div class="header_text_wrapper all_centered_flex">
+                                        <div class="mfa_text">
+                                            <h2 class="ng-binding">This link has expired</h2>
+                                        </div>
+                                    </div>
+                                </bold-header><login-text message="LOGIN.RETRY_REGENERATING_LINK"
+                                    class="ng-isolate-scope">
+                                    <div class="all_centered_flex">
+                                        <div class="mfa_text ng-binding"> Retry the action which generated this link to
+                                            obtain a new one. </div>
+                                    </div>
+                                </login-text><br>
+                                <btn message="LOGIN.CLOSE_WINDOW" to-call="lc.closeWindow()" class="ng-isolate-scope">
+                                    <div class="login_element all_centered_flex"><button
+                                            class="center-text-align title-case btn-success ng-binding"
+                                            ng-class="btnType" ng-click="toCall()">Close window</button></div>
+                                </btn>
+                            </div>
+                        </mfa-link-expired><verifying-request ng-show="lc.pageControls.showLoadingPage"
+                            class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <div class="login_form">
+                                        <div class="spin-wheel ng-isolate-scope spinner-disabled" qstrap.spin=""
+                                            spin-size="lg" spin-if="true">
+                                            <div class="spinner" role="progressbar" aria-label="loading"
+                                                aria-live="polite"
+                                                style="position: absolute; width: 0px; z-index: 1050; left: 50%; top: 50%;">
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-0-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(0deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-1-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(40deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-2-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(80deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-3-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(120deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-4-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(160deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-5-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(200deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-6-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(240deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-7-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(280deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style="position: absolute; top: -1px; opacity: 0.25; animation: 0.666667s linear 0s infinite normal none running opacity-60-25-8-9;">
+                                                    <div
+                                                        style="position: absolute; width: 13px; height: 3px; background: rgb(0, 0, 0); box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 1px; transform-origin: left center; transform: rotate(320deg) translate(8px, 0px); border-radius: 0px;">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="all_centered_flex ng-binding">Please wait ...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </verifying-request><enroll-extra-factors-message
+                            ng-show="lc.pageControls.showExtraFactorsMessage" class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <div class="login_form"><bold-header message="LOGIN.ENROLL_MORE_FACTORS"
+                                            class="ng-isolate-scope">
+                                            <div class="header_text_wrapper all_centered_flex">
+                                                <div class="mfa_text">
+                                                    <h2 class="ng-binding">Continue enrolling in methods?</h2>
+                                                </div>
+                                            </div>
+                                        </bold-header><login-text message="LOGIN.MORE_MFA_ENROLLMENT"
+                                            class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> You may continue enrolling in two-step
+                                                    verification methods or close this window to exit. </div>
+                                            </div>
+                                        </login-text><br>
+                                        <btn btn-type="'btn-danger'" to-call="lc.closeWindow()"
+                                            message="LOGIN.CLOSE_WINDOW" class="ng-isolate-scope">
+                                            <div class="login_element all_centered_flex"><button
+                                                    class="center-text-align title-case btn-success ng-binding btn-danger"
+                                                    ng-class="btnType" ng-click="toCall()">Close window</button></div>
+                                        </btn>
+                                        <btn to-call="lc.transitionToEnrollExtraFactors()"
+                                            message="LOGIN.CONTINUE_ENROLLMENT" class="ng-isolate-scope">
+                                            <div class="login_element all_centered_flex"><button
+                                                    class="center-text-align title-case btn-success ng-binding"
+                                                    ng-class="btnType" ng-click="toCall()">Continue enrolling in
+                                                    methods</button></div>
+                                        </btn>
+                                    </div>
+                                </div>
+                            </div>
+                        </enroll-extra-factors-message><mfa-finish-enrolling-message
+                            ng-show="lc.pageControls.showFinishEnrollmentMessage" class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <div class="login_form"><bold-header
+                                            message="LOGIN.EXHAUSTED_ENROLLMENT_METHODS_HEADER"
+                                            class="ng-isolate-scope">
+                                            <div class="header_text_wrapper all_centered_flex">
+                                                <div class="mfa_text">
+                                                    <h2 class="ng-binding">No more methods to enroll in</h2>
+                                                </div>
+                                            </div>
+                                        </bold-header><login-text message="LOGIN.EXHAUSTED_ENROLLMENT_METHODS"
+                                            class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> You have enrolled in all available
+                                                    two-step verification methods. There are no more options to enroll
+                                                    in at this time. </div>
+                                            </div>
+                                        </login-text><br>
+                                        <btn to-call="lc.closeWindow()" message="LOGIN.CLOSE_WINDOW"
+                                            class="ng-isolate-scope">
+                                            <div class="login_element all_centered_flex"><button
+                                                    class="center-text-align title-case btn-success ng-binding"
+                                                    ng-class="btnType" ng-click="toCall()">Close window</button></div>
+                                        </btn>
+                                    </div>
+                                </div>
+                            </div>
+                        </mfa-finish-enrolling-message><mfa-enter-phone-number
+                            ng-show="lc.pageControls.showEnterPhoneNumber" class="ng-scope ng-hide">
+                            <div class="dynamic_vertical_container top_down_column_flex_center">
+                                <div class="fixed_width_container all_centered_flex">
+                                    <div class="login_form"><bold-header message="LOGIN.ENTER_PHONE_NUMBER_HEADER"
+                                            class="ng-isolate-scope">
+                                            <div class="header_text_wrapper all_centered_flex">
+                                                <div class="mfa_text">
+                                                    <h2 class="ng-binding">Enter Phone Number</h2>
+                                                </div>
+                                            </div>
+                                        </bold-header><login-text message="LOGIN.ENTER_PHONE_NUMBER_INFO"
+                                            class="ng-isolate-scope">
+                                            <div class="all_centered_flex">
+                                                <div class="mfa_text ng-binding"> This phone number will only be used
+                                                    for account security purposes. </div>
+                                            </div>
+                                        </login-text><br>
+                                        <div class="login_element all_centered_flex"><input type="tel" id="phone"
+                                                class="login_fields ng-pristine ng-untouched ng-valid ng-empty"
+                                                ng-click="lc.clearError('mfaPhoneNumber')"
+                                                ng-class="{error_focus:lc.showError.mfaPhoneNumber}"
+                                                ng-model="lc.mfaInfo.phoneNumber"></div><error-banner
+                                            error-message="lc.message" ng-show="lc.showError.mfaPhoneNumber"
+                                            errorbannerid="mfaEnterPhoneNum" class="ng-isolate-scope ng-hide">
+                                            <div role="alert" aria-live="assertive" aria-atomic="true">
+                                                <div id="errorBanner-mfaEnterPhoneNum"
+                                                    class="error_element all_centered_flex">
+                                                    <div class="error_backing all_centered_flex">
+                                                        <div class="error_wrapper">
+                                                            <div class="error_with_margin ng-binding"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </error-banner>
+                                        <btn to-call="lc.enrollPhoneNumber()" message="LOGIN.CONTINUE"
+                                            class="ng-isolate-scope">
+                                            <div class="login_element all_centered_flex"><button
+                                                    class="center-text-align title-case btn-success ng-binding"
+                                                    ng-class="btnType" ng-click="toCall()">Continue</button></div>
+                                        </btn><back-to-login-button ng-hide="lc.mfaInfo.enrollExtraFactors"
+                                            class="ng-scope"><a href="#" ng-click="lc.returnToLogin()"><login-text
+                                                    message="LOGIN.RETURN_TO_LOGIN" class="ng-isolate-scope">
+                                                    <div class="all_centered_flex">
+                                                        <div class="mfa_text ng-binding"> Return to login </div>
+                                                    </div>
+                                                </login-text></a></back-to-login-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </mfa-enter-phone-number>
+                    </div>
+                    <div class="login_element all_centered_flex ng-hide" ng-click="lc.fedrampRedirect()"
+                        ng-show="lc.isOauthRedirect &amp;&amp; lc.clientId == 'support' &amp;&amp; !lc.isFedrampEnvironment">
+                        <div class="fedramp_btn">
+                            <div class="center-text-align ng-binding">I'm a FedRAMP user</div>
+                        </div>
+                    </div>
+                    <div class="login_element all_centered_flex ng-hide" ng-click="lc.fedrampClientRedirect()"
+                        ng-show="lc.isIdAuthRedirect &amp;&amp; lc.fedrampRedirectLink &amp;&amp; !lc.isFedrampEnvironment">
+                        <div class="fedramp_btn">
+                            <div class="center-text-align ng-binding">I'm a FedRAMP user</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script async="async" defer="defer"
+                src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit&amp;hl=en-US"></script>
+        </span><!-- end ngIf: lc.page == 'login' --> <!-- ngIf: lc.page == 'reset' -->
+        <!-- ngIf: lc.page == 'sso-provision-user' --> <!-- ngIf: lc.page == 'sso-test-connection' -->
+        <!-- ngIf: lc.page === 'debug-codes' --> <!-- ngIf: lc.page == 'redirect-notification' -->
+        <!-- ngIf: lc.page == 'enrollment' -->
+        <!-- ngIf: lc.page == 'email-verification' --><!-- ngIf: lc.marketingBanner && !lc.brandLogo -->
+        <div class="mkt_body ng-scope" ng-if="lc.marketingBanner &amp;&amp; !lc.brandLogo"><iframe
+                src="https://www.qualtrics.com/login-banners/" style="width:100%;height:100%;border-width:0px"
+                lang="en-US" title="Marketing Banner"></iframe></div>
+        <!-- end ngIf: lc.marketingBanner && !lc.brandLogo --><!-- ngIf: (lc.isOauthRedirect && lc.clientId === 'support') || (lc.isIdAuthRedirect && lc.showSupportLoginBanner === 'true') -->
+        <div class="all_centered_flex keep_bottom ng-hide" ng-show="lc.brandCustomText || lc.optionalLoginText">
+            <div id="optionalLoginText" ng-show="lc.optionalLoginText" ng-bind-html="lc.optionalLoginText"
+                class="brand_text_container ng-binding ng-hide"></div>
+            <div id="customBrandText" ng-show="lc.brandCustomText" ng-bind-html="lc.brandCustomText"
+                class="brand_text_container ng-binding ng-hide"></div>
+        </div>
+    </div>
+    <script src="/tractive/scripts/tractive.min.js" defer="defer"></script>
+    <div id="hl-aria-live-message-container" aria-live="polite" class="visually-hidden"></div>
+    <div id="hl-aria-live-alert-container" role="alert" aria-live="assertive" class="visually-hidden"></div>
+    <script type="text/javascript"
+        src="//zncydxfem8jrupnsj-qwebsite.siteintercept.qualtrics.com/WRSiteInterceptEngine/?Q_ZID=ZN_cYDxfeM8jruPnSJ&amp;Q_LOC=https%3A%2F%2Flogin.qualtrics.com%2Flogin&amp;t=1737079813743"></script>
+    <div
+        style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div
+            style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;">
+        </div>
+        <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes"
+                name="c-wkpqw5avhfe" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=1Bq_oiMBd4XPUhKDwr0YL1Js&amp;k=6LdFdyQTAAAAAM5BnlGoA6uwbNuuBjUmHaEzF007"
+                style="width: 100%; height: 100%;"></iframe></div>
+    </div>
+    <div
+        style="background-color: rgb(255, 255, 255); border: 1px solid rgb(204, 204, 204); box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 3px; position: absolute; transition: visibility linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000; left: 0px; top: -10000px;">
+        <div
+            style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: rgb(255, 255, 255); opacity: 0.05;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 11px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;">
+        </div>
+        <div class="g-recaptcha-bubble-arrow"
+            style="border: 10px solid transparent; width: 0px; height: 0px; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;">
+        </div>
+        <div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge expires in two minutes"
+                name="c-pylv3m0qs24" frameborder="0" scrolling="no"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
+                src="https://www.google.com/recaptcha/api2/bframe?hl=en&amp;v=1Bq_oiMBd4XPUhKDwr0YL1Js&amp;k=6LdFdyQTAAAAAM5BnlGoA6uwbNuuBjUmHaEzF007"
+                style="width: 100%; height: 100%;"></iframe></div>
+    </div>
+</body>
+
+</html>

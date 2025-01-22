@@ -1,0 +1,241 @@
+html {
+    line-height: 1.15;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+dl dl,
+dl ol,
+dl ul,
+ol dl,
+ol ol,
+ol ul,
+ul dl,
+ul ol,
+ul ul {
+    margin: 0
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+main {
+    display: block
+}
+
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+abbr[title] {
+    text-decoration: underline;
+    text-decoration: underline dotted
+}
+
+b,
+strong {
+    font-weight: bolder
+}
+
+code,
+kbd,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+
+small {
+    font-size: 80%
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+button,
+input,
+select {
+    margin: 0
+}
+
+button {
+    overflow: visible;
+    text-transform: none
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+    -webkit-appearance: button
+}
+
+fieldset {
+    padding: .35em .75em .625em
+}
+
+input {
+    overflow: visible
+}
+
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    white-space: normal
+}
+
+progress {
+    display: inline-block;
+    vertical-align: baseline
+}
+
+select {
+    text-transform: none
+}
+
+textarea {
+    margin: 0;
+    overflow: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .54
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+:-moz-ui-invalid {
+    box-shadow: none
+}
+
+details,
+dialog {
+    display: block
+}
+
+dialog {
+    background-color: #fff;
+    border: solid;
+    color: #000;
+    height: -moz-fit-content;
+    height: -webkit-fit-content;
+    height: fit-content;
+    left: 0;
+    margin: auto;
+    padding: 1em;
+    position: absolute;
+    right: 0;
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content
+}
+
+dialog:not([open]) {
+    display: none
+}
+
+summary {
+    display: list-item
+}
+
+template {
+    display: none
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-ExLight.eot);
+    src: url(fonts/QualtricsGrotesque-ExLight.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-ExLight.woff) format("woff"), url(fonts/QualtricsGrotesque-ExLight.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-Thin.eot);
+    src: url(fonts/QualtricsGrotesque-Thin.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-Thin.woff) format("woff"), url(fonts/QualtricsGrotesque-Thin.ttf) format("truetype");
+    font-weight: 200;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-Light.eot);
+    src: url(fonts/QualtricsGrotesque-Light.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-Light.woff) format("woff"), url(fonts/QualtricsGrotesque-Light.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-Regular.eot);
+    src: url(fonts/QualtricsGrotesque-Regular.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-Regular.woff) format("woff"), url(fonts/QualtricsGrotesque-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-SemiBold.eot);
+    src: url(fonts/QualtricsGrotesque-SemiBold.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-SemiBold.woff) format("woff"), url(fonts/QualtricsGrotesque-SemiBold.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-Bold.eot);
+    src: url(fonts/QualtricsGrotesque-Bold.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-Bold.woff) format("woff"), url(fonts/QualtricsGrotesque-Bold.ttf) format("truetype");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Qualtrics Grotesque";
+    src: url(fonts/QualtricsGrotesque-ExtraBold.eot);
+    src: url(fonts/QualtricsGrotesque-ExtraBold.eot) format("embedded-opentype"), url(fonts/QualtricsGrotesque-ExtraBold.woff) format("woff"), url(fonts/QualtricsGrotesque-ExtraBold.ttf) format("truetype");
+    font-weight: 800;
+    font-style: normal
+}
+
+* {
+    font-family: "Qualtrics Grotesque", "Helvetica Neue", Helvetica, Arial, sans-serif
+}
