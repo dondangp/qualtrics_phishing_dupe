@@ -17896,7 +17896,7 @@ body {
   width: 250px;
   margin-bottom: 6px;
   float: left;
-  background-image: url("../client/img/qualtrics-logo.min.svg");
+  background-image: url("../img/qualtrics-logo.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -18337,11 +18337,11 @@ input::placeholder {
 }
 
 .username {
-  background-image: url("../client/img/user.min.svg");
+  background-image: url("../img/user.min.svg");
 }
 
 .password {
-  background-image: url("../client/img/lock.min.svg");
+  background-image: url("../img/lock.min.svg");
 }
 
 .need_password {
