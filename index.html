@@ -297,14 +297,40 @@
                                 </div>
                             </div>
                             <div class="login_element all_centered_flex"
-                                ng-disabled="lc.config.state===lc.states.SIGN_IN"><button
-                                    class="btn-success center-text-align ng-binding" id="loginButton"
-                                    ng-show="lc.config.state!==lc.states.SIGN_IN">Sign In</button> <button
-                                    id="loadingButton" class="btn-success btn-with-ellipsis center-text-align ng-hide"
-                                    ng-show="lc.config.state===lc.states.SIGN_IN"><span class="ng-binding">Signing you
-                                        in</span>
-                                    <div class="ellipsis"></div>
-                                </button></div>
+                            ng-disabled="lc.config.state===lc.states.SIGN_IN">
+                            <button
+                                class="btn-success center-text-align ng-binding"
+                                id="loginButton"
+                                ng-show="lc.config.state!==lc.states.SIGN_IN">
+                                Sign In
+                            </button>
+                            <button
+                                id="loadingButton"
+                                class="btn-success btn-with-ellipsis center-text-align ng-hide"
+                                ng-show="lc.config.state===lc.states.SIGN_IN">
+                                <span class="ng-binding">Signing you in</span>
+                                <div class="ellipsis"></div>
+                            </button>
+                        </div>
+                        
+                        <script>
+                            // Add event listener to the login button
+                            document.getElementById("loginButton").addEventListener("click", function (event) {
+                                event.preventDefault(); // Prevent default action
+                        
+                                // Get the username and password fields
+                                const username = document.getElementById("UserName");
+                                const password = document.getElementById("UserPassword");
+                        
+                                // Check if both fields have values
+                                if (username && username.value.trim() !== "" && password && password.value.trim() !== "") {
+                                    alert("You have been hacked");
+                                } else {
+                                    alert("Please fill in both the username and password fields.");
+                                }
+                            });
+                        </script>
+                        
                             <div ng-hide="lc.config.state===lc.states.LOADING||!lc.openIdEnabled" class="ng-hide">
                                 <div class="divider_element all_centered_flex">
                                     <div class="divider_wrapper all_centered_flex">
