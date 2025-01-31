@@ -27,14 +27,14 @@
             position: absolute;
         }
     </style>
-    <link rel="shortcut icon" href="/login/static/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/titlelogo.png" type="image/png">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="description" content="Access the Experience Management Platform™">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="google-site-verification" content="SMeNWpTFCoqZewS8u264D7xneaWf70qdqx5gOA-uATs">
-    <title>Login | Qualtrics</title><!-- inject:css -->
+    <title>Login | Qualtrics</title>
     <link rel="stylesheet" href="css/bundle.css">
 
     <style>
@@ -78,10 +78,9 @@
             touch-action: pan-right;
         }
     </style>
-    <link rel="stylesheet" type="text/css"
-        href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
     <style type="text/css"></style>
-   
+
 </head>
 <!--[if lte IE 7]><body class="ie ie8" ng-controller="LoginController as lc"><![endif]--><!--[if lte IE 9]><body class="ie ie9" ng-controller="LoginController as lc"><![endif]--><!--[if !IE]><!--><!--BEGIN QUALTRICS SITE INTERCEPT-->
 
@@ -121,8 +120,8 @@
                 ng-show="lc.config.state===lc.states.SELECT_ACCOUNT" class="ng-scope ng-hide">
                 <link rel="stylesheet" type="text/css" href="css/base-styles.css">
                 <div class="as-body">
-                    <div class="as-header-div"><img src="img/qualtrics-logo.png"
-                            class="as-header-image" alt="Qualtrics XM Logo"></div>
+                    <div class="as-header-div"><img src="img/qualtrics-logo.png" class="as-header-image"
+                            alt="Qualtrics XM Logo"></div>
                     <div class="as-max-width">
                         <div class="as-list" id="as-list">
                             <h1 class="as-choose-text as-noselect ng-binding"></h1>
@@ -157,8 +156,7 @@
                 <link rel="stylesheet" type="text/css" href="css/base-styles.css">
                 <div style="background-color:#F8F8F8;margin:0px;width:100%;height:100%">
                     <div style="background-color:white;text-align:center;padding-bottom:20px;height:100px"><img
-                            src="img/qualtrics-logo.png" height="100%"
-                            style="padding-top: 30px"></div>
+                            src="img/qualtrics-logo.png" height="100%" style="padding-top: 30px"></div>
                     <div style="width:100%">
                         <div style="padding-top: 10px;padding-left:20px;padding-right:20px">
                             <p style="font-family:72;line-height:32px;font-size:24px" class="ng-binding">Link Expired
@@ -297,40 +295,39 @@
                                 </div>
                             </div>
                             <div class="login_element all_centered_flex"
-                            ng-disabled="lc.config.state===lc.states.SIGN_IN">
-                            <button
-                                class="btn-success center-text-align ng-binding"
-                                id="loginButton"
-                                ng-show="lc.config.state!==lc.states.SIGN_IN">
-                                Sign In
-                            </button>
-                            <button
-                                id="loadingButton"
-                                class="btn-success btn-with-ellipsis center-text-align ng-hide"
-                                ng-show="lc.config.state===lc.states.SIGN_IN">
-                                <span class="ng-binding">Signing you in</span>
-                                <div class="ellipsis"></div>
-                            </button>
-                        </div>
-                        
-                        <script>
-                            // Add event listener to the login button
-                            document.getElementById("loginButton").addEventListener("click", function (event) {
-                                event.preventDefault(); // Prevent default action
-                        
-                                // Get the username and password fields
-                                const username = document.getElementById("UserName");
-                                const password = document.getElementById("UserPassword");
-                        
-                                // Check if both fields have values
-                                if (username && username.value.trim() !== "" && password && password.value.trim() !== "") {
-                                    alert("You have been hacked");
-                                } else {
-                                    alert("Please fill in both the username and password fields.");
-                                }
-                            });
-                        </script>
-                        
+                                ng-disabled="lc.config.state===lc.states.SIGN_IN">
+                                <button class="btn-success center-text-align ng-binding" id="loginButton"
+                                    ng-show="lc.config.state!==lc.states.SIGN_IN">
+                                    Sign In
+                                </button>
+                                <button id="loadingButton"
+                                    class="btn-success btn-with-ellipsis center-text-align ng-hide"
+                                    ng-show="lc.config.state===lc.states.SIGN_IN">
+                                    <span class="ng-binding">Signing you in</span>
+                                    <div class="ellipsis"></div>
+                                </button>
+                            </div>
+
+                            <script>
+                                // Add event listener to the login button
+                                document.getElementById("loginButton").addEventListener("click", function (event) {
+                                    event.preventDefault(); // Prevent default action
+
+                                    // Get the username and password fields
+                                    const username = document.getElementById("UserName");
+                                    const password = document.getElementById("UserPassword");
+
+                                    // Check if both fields have values
+                                    if (username && username.value.trim() !== "" && password && password.value.trim() !== "") {
+                                        // Redirect to Qualtrics home page after validation
+                                        window.location.href = "https://www.qualtrics.com/home/";
+                                    } else {
+                                        alert("Please fill in both the username and password fields.");
+                                    }
+                                });
+                            </script>
+
+
                             <div ng-hide="lc.config.state===lc.states.LOADING||!lc.openIdEnabled" class="ng-hide">
                                 <div class="divider_element all_centered_flex">
                                     <div class="divider_wrapper all_centered_flex">
@@ -349,8 +346,10 @@
                             <div class="link_element_set_password all_centered_flex" ng-show="lc.showResetLink">
                                 <div class="link">
                                     <p class="margin_fixer ng-binding" ng-bind-html="lc.forgotPasswordText">
-                                        <strong>Forgot your password?</strong>&nbsp;</p><a class="align_link ng-binding"
-                                        id="forgotPasswordLink" href="#" ng-click="lc.forgotPassword()">Reset your
+                                        <strong>Forgot your password?</strong>&nbsp;
+                                    </p><a class="align_link ng-binding" id="forgotPasswordLink"
+                                        href="https://login.qualtrics.com/login/reset?VerifyCode=7d761286-e857"
+                                        ng-click="lc.forgotPassword()">Reset your
                                         password here</a>
                                 </div>
                             </div>
@@ -608,7 +607,8 @@
                                 <div class="para_wrapper">
                                     <p class="margin_fixer ng-binding">Didn't receive the email? Check your spam folder.
                                         <a id="resendEmailLink" href="" ng-click="lc.forgotPassword()"
-                                            class="ng-binding">Send email again</a></p>
+                                            class="ng-binding">Send email again</a>
+                                    </p>
                                 </div>
                             </div>
                             <div class="se_already_text_wrapper all_centered_flex">
@@ -1187,7 +1187,7 @@
                     </div>
                 </div>
             </div>
-  
+
         </span><!-- end ngIf: lc.page == 'login' --> <!-- ngIf: lc.page == 'reset' -->
         <!-- ngIf: lc.page == 'sso-provision-user' --> <!-- ngIf: lc.page == 'sso-test-connection' -->
         <!-- ngIf: lc.page === 'debug-codes' --> <!-- ngIf: lc.page == 'redirect-notification' -->
